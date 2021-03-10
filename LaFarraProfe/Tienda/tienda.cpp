@@ -104,14 +104,14 @@ void Tienda::vender()
         cin >> cantidadProducto;
         IVAproducto = producto.getPrecio() * producto.getIVA();
         contIVA += IVAproducto;
-        valorTotalProducto = (producto.getPrecio() * cantidadProducto) + IVAproducto;
+        valorTotalProducto = (producto.getPrecio() * cantidadProducto) + (IVAproducto * cantidadProducto);
         venta.crearDetalleVenta(producto, valorTotalProducto, IVAproducto, cantidadProducto);
     }while(opc != -1);
 
     cout << "Digite codigo del producto: " << endl;
     cin >> codigoCliente;
 
-
+    cliente = buscarClienteId(codigoCliente);
 
     this->listaVentas.push_back(Venta(cliente, fecha, valorTotalVenta, venta, contIVA, idVenta));
     // Se vende hasta que el cajero escriba menos uno
