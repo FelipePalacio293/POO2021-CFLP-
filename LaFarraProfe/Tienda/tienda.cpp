@@ -105,15 +105,22 @@ void Tienda::vender()
         IVAproducto = producto.getPrecio() * producto.getIVA();
         contIVA += IVAproducto;
         valorTotalProducto = (producto.getPrecio() * cantidadProducto) + (IVAproducto * cantidadProducto);
+        valorTotalVenta += valorTotalProducto;
         venta.crearDetalleVenta(producto, valorTotalProducto, IVAproducto, cantidadProducto);
-    }while(opc != -1);
+    } while(opc != -1);
 
     cout << "Digite codigo del producto: " << endl;
     cin >> codigoCliente;
 
     cliente = buscarClienteId(codigoCliente);
 
-    this->listaVentas.push_back(Venta(cliente, fecha, valorTotalVenta, venta, contIVA, idVenta));
+    venta.setCliente(cliente);
+    venta.setFecha(fecha);
+    venta.setId(idVenta);
+    venta.setIVATotal(contIVA);
+    venta.setValorTotal(valorTotalVenta);
+
+    listaVentas.push_back(venta);
     // Se vende hasta que el cajero escriba menos uno
 
     // Se pide el codigo del producto
@@ -130,5 +137,4 @@ void Tienda::vender()
     // Se crea un numero de factua
     // Se asocia la lista del detalle de la factura
     // Se crea el objeto venta, en la lista de ventas de la tienda.  (relación de composicion.)
-    cout << "Lo siento no estoy implementado";
 }

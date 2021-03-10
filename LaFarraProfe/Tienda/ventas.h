@@ -15,15 +15,20 @@ class Venta
 {
 private:
     Cliente cliente;
-    int fecha;
+    string fecha;
     float valorTotal;
     list<DetalleVenta> listaDetalles;
     float IVATotal;
     int id;
 public:
     Venta();
-    Venta(Cliente, int, float, DetalleVenta, float, int);
+    Venta(Cliente, string, float, DetalleVenta, float, int);
     void crearDetalleVenta(Producto, float, float, int);
+    void setCliente(Cliente);
+    void setFecha(string);
+    void setValorTotal(float);
+    void setIVATotal(float);
+    void setId(int);
 };
 
 #endif
