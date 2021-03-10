@@ -6,13 +6,14 @@ Producto::Producto()
 }
 
 //este constructor es para crear cada producto y añadirlo a la lista
-Producto::Producto(string marca, string tipoProducto, int codigo, int exs, float valorProducto)
+Producto::Producto(string marca, string tipoProducto, int codigo, int exs, float valorProducto, float porcIVA)
 {
     this->marca = marca;
     this->tipoProducto = tipoProducto;
     this->codigoProducto = codigo;
     this->existencia = exs;
     this->valorProducto = valorProducto;
+    this->porcIVA = porcIVA;
 }
 
 void Producto::mostrarProducto()
@@ -33,4 +34,9 @@ int Producto::getId()
 float Producto::getPrecio()
 {
     return this->valorProducto;
+}
+
+float Producto::getIVA()
+{
+    return this->porcIVA;
 }

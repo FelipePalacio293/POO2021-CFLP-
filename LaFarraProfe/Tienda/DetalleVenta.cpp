@@ -4,7 +4,7 @@ DetalleVenta::DetalleVenta()
 {    
 }
 
-DetalleVenta::DetalleVenta(string cliente, float valor, float IVA, int cantidadProducto)
+DetalleVenta::DetalleVenta(Producto producto, float valor, float IVA, int cantidadProducto)
 {
     this->producto = producto;
     this->valor = valor;

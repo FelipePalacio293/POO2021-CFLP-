@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "DetalleVenta.h"
+#include "producto.h"
+#include "Cliente.h"
 
 using std::cin;
 using std::cout;
@@ -12,7 +14,7 @@ using std::string;
 class Venta
 {
 private:
-    string cliente;
+    Cliente cliente;
     int fecha;
     float valorTotal;
     list<DetalleVenta> listaDetalles;
@@ -20,8 +22,8 @@ private:
     int id;
 public:
     Venta();
-    Venta(string, int, int, DetalleVenta, float, int);
-    void crearDetalleVenta(string, float, float, int);
+    Venta(Cliente, int, float, DetalleVenta, float, int);
+    void crearDetalleVenta(Producto, float, float, int);
 };
 
 #endif

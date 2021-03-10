@@ -2,6 +2,7 @@
 #define DETALLEVENTA_H
 
 #include <iostream>
+#include "producto.h"
 
 using std::cin;
 using std::cout;
@@ -11,13 +12,13 @@ using std::string;
 class DetalleVenta
 {
 private:
-    string producto;
+    Producto producto;
     float valor;
     float IVA;
     int cantidadProducto;
 public:
     DetalleVenta();
-    DetalleVenta(string, float, float, int);
+    DetalleVenta(Producto, float, float, int);
 };
 
 #endif

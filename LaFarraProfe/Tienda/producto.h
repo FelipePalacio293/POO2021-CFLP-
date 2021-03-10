@@ -18,13 +18,14 @@ private:
     int codigoProducto;
     int existencia;
     float valorProducto;
-
+    float porcIVA;
 public:
     Producto();
-    Producto(string, string, int, int, float);
+    Producto(string, string, int, int, float, float);
     void mostrarProducto();
     int getId();
     float getPrecio();
+    float getIVA();
 };
 
 #endif

@@ -4,7 +4,7 @@ Venta::Venta()
 {
 }
 
-Venta::Venta(string cliente, int fecha, float valorTotal, DetalleVenta listaDetalles, float IVATotal, int id)
+Venta::Venta(Cliente cliente, int fecha, float valorTotal, DetalleVenta listaDetalles, float IVATotal, int id)
 {
     this->cliente = cliente;
     this->fecha = fecha;
@@ -14,7 +14,7 @@ Venta::Venta(string cliente, int fecha, float valorTotal, DetalleVenta listaDeta
     this->id = id;
 }
 
-void Venta::crearDetalleVenta(string producto, float valor, float IVA, int cantidadProducto)
+void Venta::crearDetalleVenta(Producto producto, float valor, float IVA, int cantidadProducto)
 {
-    this->listaDetalles.push_back();
+    this->listaDetalles.push_back(DetalleVenta(producto, valor, IVA, cantidadProducto));
 }

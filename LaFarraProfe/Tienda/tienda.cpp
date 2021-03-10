@@ -13,7 +13,7 @@ Tienda::Tienda()
 void Tienda::setDummyData()
 {
     this->listaCliente.push_back(Cliente("Luisa", "lufe089@gmail.com", 1020, "20202"));
-    this->listaProductos.push_back(Producto("Pantene", "Shampoo", 01, 10, 8520));
+    this->listaProductos.push_back(Producto("Pantene", "Shampoo", 01, 10, 8520, 0.30));
 }
 
 //METODOS TIENDA
@@ -64,7 +64,7 @@ void Tienda::agregarProducto()
 {
     string marca, tipoProducto;
     int codigo, existencia;
-    float valorProducto;
+    float valorProducto, porcIVA;
 
     cout << "Digite marca: " << endl;
     cin >> marca;
@@ -81,24 +81,39 @@ void Tienda::agregarProducto()
     cout << "Digite valor del producto: " << endl;
     cin >> valorProducto;
 
-    listaProductos.push_back(Producto(marca, tipoProducto, codigo, existencia, valorProducto));
+    cout << "Digite el porcentaje de IVA: " << endl;
+    cin >> porcIVA;
+
+    listaProductos.push_back(Producto(marca, tipoProducto, codigo, existencia, valorProducto, porcIVA));
 }
 
 void Tienda::vender()
 {
-    int opc, codigoProducto, codigoCliente, cantidadProducto;
-    float valorTotalProducto, valorTotalProducto;
+    int opc, codigoProducto, codigoCliente, cantidadProducto, codigoCliente, idVenta;
+    float valorTotalProducto, valorTotalVenta, IVAproducto, contIVA = 0;
     Producto producto;
+    Cliente cliente;
+    Venta venta;
+    string fecha;
     do
     {
-        cout << "Digite codigo: " << endl;
+        cout << "Digite codigo del producto: " << endl;
         cin >> codigoProducto;
         producto = buscarProductoId(codigoProducto);
         cout << "Digite la cantidad del producto: " << endl;
         cin >> cantidadProducto;
-        valorTotalProducto = producto.getPrecio() * cantidadProducto;
-        listaVentas.push_back(Venta());
+        IVAproducto = producto.getPrecio() * producto.getIVA();
+        contIVA += IVAproducto;
+        valorTotalProducto = (producto.getPrecio() * cantidadProducto) + IVAproducto;
+        venta.crearDetalleVenta(producto, valorTotalProducto, IVAproducto, cantidadProducto);
     }while(opc != -1);
+
+    cout << "Digite codigo del producto: " << endl;
+    cin >> codigoCliente;
+
+
+
+    this->listaVentas.push_back(Venta(cliente, fecha, valorTotalVenta, venta, contIVA, idVenta));
     // Se vende hasta que el cajero escriba menos uno
 
     // Se pide el codigo del producto
