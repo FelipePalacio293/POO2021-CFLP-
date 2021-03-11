@@ -32,6 +32,9 @@ int main()
         case 5:
             laFarra.vender();
             break;
+        case 6:
+            laFarra.mostrarTodasLasVentas();
+            break;
         default:
             std::cout << "\nNumero invalido\n"
                       << std::endl;

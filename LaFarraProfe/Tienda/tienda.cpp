@@ -152,6 +152,7 @@ void Tienda::vender()
     } while ( cliente.getId() == 0 );
     
     venta.setCliente(cliente);
+    // To do: Revisar fecha y hora automática con la librería ctime
     venta.setFecha(fecha);
     venta.setId(idVenta);
     venta.setIVATotal(contIVA);
