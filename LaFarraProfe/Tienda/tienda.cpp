@@ -40,6 +40,7 @@ void Tienda::mostrarTodosCliente()
 
 Producto Tienda::buscarProductoId(int id)
 {
+    Producto tempProduc;
     for(list<Producto>::iterator it = listaProductos.begin(); it != listaProductos.end(); it++)
     {
         if(it->getId() == id)
@@ -47,6 +48,8 @@ Producto Tienda::buscarProductoId(int id)
             return *it;
         }
     }
+    tempProduc.setId(000);
+    return tempProduc;
 }
 
 Cliente Tienda::buscarClienteId(int id)
@@ -58,6 +61,9 @@ Cliente Tienda::buscarClienteId(int id)
             return *it;
         }
     }
+    Cliente cliente;
+    cliente.setId(000);
+    return cliente;
 }
 
 void Tienda::agregarProducto()
@@ -87,10 +93,18 @@ void Tienda::agregarProducto()
     listaProductos.push_back(Producto(marca, tipoProducto, codigo, existencia, valorProducto, porcIVA));
 }
 
+void Tienda::mostrarTodasLasVentas()
+{
+    for(list<Venta>::iterator it = listaVentas.begin(); it != listaVentas.end(); it++)
+    {
+        it->mostrarVenta();
+    }
+}
+
 void Tienda::vender()
 {
-    int opc, codigoProducto, codigoCliente, cantidadProducto, codigoCliente, idVenta;
-    float valorTotalProducto, valorTotalVenta, IVAproducto, contIVA = 0;
+    int opc = 0, codigoProducto, codigoCliente, cantidadProducto, idVenta;
+    float valorTotalProducto, valorTotalVenta = 0, IVAproducto, contIVA = 0;
     Producto producto;
     Cliente cliente;
     Venta venta;
@@ -98,22 +112,45 @@ void Tienda::vender()
     do
     {
         cout << "Digite codigo del producto: " << endl;
-        cin >> codigoProducto;
+        cin >> codigoProducto; 
         producto = buscarProductoId(codigoProducto);
+
+        // El id 0 se utiliza para especificar que el producto no existe
+
+        if(producto.getId() == 000) 
+        {
+            cout << "El producto no existe" << endl;
+            continue;
+        }
+
         cout << "Digite la cantidad del producto: " << endl;
         cin >> cantidadProducto;
-        IVAproducto = producto.getPrecio() * producto.getIVA();
-        contIVA += IVAproducto;
-        valorTotalProducto = (producto.getPrecio() * cantidadProducto) + (IVAproducto * cantidadProducto);
-        valorTotalVenta += valorTotalProducto;
-        venta.crearDetalleVenta(producto, valorTotalProducto, IVAproducto, cantidadProducto);
-    } while(opc != -1);
 
-    cout << "Digite codigo del producto: " << endl;
-    cin >> codigoCliente;
+        if(producto.getExistencia() >= cantidadProducto)
+        {
+            IVAproducto = producto.getPrecio() * producto.getIVA();
+            contIVA += IVAproducto;
+            valorTotalProducto = (producto.getPrecio() * cantidadProducto) + (IVAproducto * cantidadProducto);
+            valorTotalVenta += valorTotalProducto;
+            venta.crearDetalleVenta(producto, valorTotalProducto, IVAproducto, cantidadProducto);
+            producto.setExistencia(producto.getExistencia() - cantidadProducto);
+        }
+        else
+        {
+            cout << "Insuficientes unidades del producto" << endl;
+        }
+        cout << "Digite cualquier numero para continuar (-1 Para salir): " << endl;
+        cin >> opc;
 
-    cliente = buscarClienteId(codigoCliente);
+    } while( opc != -1 );
 
+    do
+    {
+        cout << "Digite codigo del cliente: " << endl;
+        cin >> codigoCliente;
+        cliente = buscarClienteId(codigoCliente);
+    } while ( cliente.getId() == 0 );
+    
     venta.setCliente(cliente);
     venta.setFecha(fecha);
     venta.setId(idVenta);
@@ -121,20 +158,4 @@ void Tienda::vender()
     venta.setValorTotal(valorTotalVenta);
 
     listaVentas.push_back(venta);
-    // Se vende hasta que el cajero escriba menos uno
-
-    // Se pide el codigo del producto
-    // Se  busca el producto por código
-    // Se pregunta cuantos se van a vender de ese producto
-    // Se calcula el valor total de la venta de ese producto
-    // Se agrega a la lista de detalle
-    // Se agrega el valor total al gran total
-
-    // Una vez terminado de agregar productos
-    // Se pide el numero del cliente
-    // Se busca el cliente
-    // Se calcula la fecha y hora actual
-    // Se crea un numero de factua
-    // Se asocia la lista del detalle de la factura
-    // Se crea el objeto venta, en la lista de ventas de la tienda.  (relación de composicion.)
 }

@@ -11,6 +11,7 @@ int menu()
     std::cout << "3. Agregar cliente" << std::endl;
     std::cout << "4. Mostrar clientes" << std::endl;
     std::cout << "5. Vender" << std::endl;
+    std::cout << "6. Mostrar ventas" << std::endl;
     std::cout << "0. Salir\n"
               << std::endl;
     std::cout << "Digita el numero: ";

@@ -26,9 +26,24 @@ void Producto::mostrarProducto()
     cout << "Valor producto: " << this->valorProducto << "$" << endl;
 }
 
+void Producto::setId(int id)
+{
+    this->codigoProducto = id;
+}
+
+void Producto::setExistencia(int existencia)
+{
+    this->existencia = existencia;
+}
+
 int Producto::getId()
 {
     return this->codigoProducto;
+}
+
+int Producto::getExistencia()
+{
+    return this->existencia;
 }
 
 float Producto::getPrecio()
@@ -39,4 +54,14 @@ float Producto::getPrecio()
 float Producto::getIVA()
 {
     return this->porcIVA;
+}
+
+string Producto::getNombre()
+{
+    return this->marca;
+}
+
+string Producto::getTipoProducto()
+{
+    return this->tipoProducto;
 }

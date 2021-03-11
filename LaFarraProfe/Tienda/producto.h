@@ -23,9 +23,14 @@ public:
     Producto();
     Producto(string, string, int, int, float, float);
     void mostrarProducto();
+    void setId(int);
+    void setExistencia(int);
     int getId();
+    int getExistencia();
     float getPrecio();
     float getIVA();
+    string getNombre();
+    string getTipoProducto();
 };
 
 #endif

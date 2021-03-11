@@ -19,6 +19,7 @@ private:
 public:
     DetalleVenta();
     DetalleVenta(Producto, float, float, int);
+    void mostrarDetallesVentas();
 };
 
 #endif

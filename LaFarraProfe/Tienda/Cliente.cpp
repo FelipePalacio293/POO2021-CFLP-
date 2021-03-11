@@ -1,6 +1,11 @@
 #include "Cliente.h"
 
 //CONSTRUCTORES CLIENTE
+
+Cliente::Cliente()
+{
+}
+
 Cliente::Cliente(string nombre, string email, int id, string telefono)
 {
     this->nombre = nombre;
@@ -23,7 +28,17 @@ void Cliente::mostrarCliente()
     cout << " telefono: " << this->telefono << endl;
 }
 
+void Cliente::setId(int id)
+{
+    this->id = id;
+}
+
 int Cliente::getId()
 {
     return this->id;
+}
+
+string Cliente::getNombre()
+{
+    return this->nombre;
 }

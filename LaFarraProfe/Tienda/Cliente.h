@@ -20,7 +20,9 @@ public:
     Cliente();
     Cliente(string, string, int, string);
     void mostrarCliente();
+    void setId(int);
     int getId();
+    string getNombre();
 };
 
 #endif

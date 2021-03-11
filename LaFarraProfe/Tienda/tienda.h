@@ -29,6 +29,7 @@ public:
     void mostrarTodosCliente();
     void agregarProducto();
     void vender();
+    void mostrarTodasLasVentas();
     Producto buscarProductoId(int);
     Cliente buscarClienteId(int);
 };

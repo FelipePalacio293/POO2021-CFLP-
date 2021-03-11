@@ -4,7 +4,7 @@ Venta::Venta()
 {
 }
 
-Venta::Venta(Cliente cliente, string fecha, float valorTotal, DetalleVenta listaDetalles, float IVATotal, int id)
+Venta::Venta(Cliente cliente, string fecha, float valorTotal, list<DetalleVenta> listaDetalles, float IVATotal, int id)
 {
     this->cliente = cliente;
     this->fecha = fecha;
@@ -12,6 +12,20 @@ Venta::Venta(Cliente cliente, string fecha, float valorTotal, DetalleVenta lista
     this->listaDetalles = listaDetalles;
     this->IVATotal = IVATotal;
     this->id = id;
+}
+
+void Venta::mostrarVenta()
+{
+    cout << "==================" << endl;
+    cout << this->cliente.getNombre() << endl;
+    cout << this->valorTotal << endl;
+    cout << this->fecha << endl;
+    cout << this->id << endl;
+    cout << this->IVATotal << endl;
+    for (list<DetalleVenta>::iterator it = listaDetalles.begin(); it != listaDetalles.end(); it++)
+    {
+        it->mostrarDetallesVentas();
+    }
 }
 
 void Venta::crearDetalleVenta(Producto producto, float valor, float IVA, int cantidadProducto)
