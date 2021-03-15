@@ -16,10 +16,13 @@ class Persona{
         string email;
         int id;
         int celular;
+        string rol;
     public:
         Persona();
-        Persona(string, string, int, int);
+        Persona(string, string, int, int, string);
         void mostrarPersona();
+        Persona buscarPersona(int);
+        int getId();
 };
 
 #endif

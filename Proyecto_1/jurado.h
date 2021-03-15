@@ -20,7 +20,7 @@ class Jurado : public Persona{
     private:
         TipoJurado tipoJurado;
     public:
-        Jurado(string, string, int, int, int);
+        Jurado(string, string, int, int, string, int);
         Jurado();
         void definirCalificaciones();
 };

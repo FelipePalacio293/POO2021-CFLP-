@@ -4,7 +4,7 @@ Jurado::Jurado(){
 
 }
 
-Jurado::Jurado(string nombre, string email, int id, int celular, int tipoJurado) : Persona(nombre, email, id, celular){
+Jurado::Jurado(string nombre, string email, int id, int celular, string rol, int tipoJurado) : Persona(nombre, email, id, celular, rol){
     if(tipoJurado == 1){
         this->tipoJurado = externo;
     }

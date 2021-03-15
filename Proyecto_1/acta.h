@@ -42,7 +42,5 @@ class Acta{
     public:
         Acta();
         Acta(int, string, Persona, string, Jurado, Jurado, Persona, Persona, int);
-
-
 };
 #endif
