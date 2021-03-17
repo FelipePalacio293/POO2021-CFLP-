@@ -34,10 +34,10 @@ void Maestria::crearPersona(){
     cin >> id;
 
     cout << "Ingrese el nombre de la persona " << endl;
-    cin >> nombre;
+    getline(cin, nombre);
 
     cout << "Ingrese email de la persona " << endl;
-    cin >> email;
+    getline(cin, email);
 
     cout << "Ingrese el celular de la persona " << endl;
     cin >> celular;
@@ -51,43 +51,32 @@ void Maestria::crearPersona(){
 void Maestria::crearJurado(){
     int id, celular, tipoJurado;
     string nombre, email, rol;
-    cout << "Ingrese el id de la persona " << endl;
+    cout << "Ingrese el id del jurado " << endl;
     cin >> id;
 
-    cout << "Ingrese el nombre de la persona " << endl;
-    cin >> nombre;
+    cout << "Ingrese el nombre del jurado" << endl;
+    getline(cin, nombre);
 
-    cout << "Ingrese email de la persona " << endl;
-    cin >> email;
+    cout << "Ingrese email del jurado " << endl;
+    getline(cin, email);
 
-    cout << "Ingrese el celular de la persona " << endl;
+    cout << "Ingrese el celular del jurado " << endl;
     cin >> celular;
 
-    cout << "Ingrese el rol de la persona " << endl;
+    cout << "Ingrese el rol del jurado " << endl;
     cin >> rol;
 
-    cout << "Ingrese el rol de la persona\n1. Interno\n2. Externo" << endl;
+    cout << "El jurado es: \n1. Interno\n2. Externo" << endl;
     cin >> tipoJurado;
 
     listaPersonas.push_back(Jurado(nombre, email, id, celular, rol, tipoJurado));
 }
 
 void Maestria::crearActa(){
-    int id;
-    int idPersona;
-    int opc;
-    string fecha;
-    string nombreDelTrabajo;
-    int idJuradoUno;
-    int idJuradoDos;
-    int idDirector;
-    int idCodirector;
-    int tipoTrabajo;
-    Persona autor;
-    Persona director;
-    Persona codirector;
-    Jurado juradoUno;
-    Jurado juradoDos;
+    int id, idPersona, opc, idJuradoUno, idJuradoDos, idDirector, idCodirector, tipoTrabajo;
+    string fecha, nombreDelTrabajo;
+    Persona autor, director, codirector;
+    Jurado juradoUno, juradoDos;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> id;
@@ -95,8 +84,15 @@ void Maestria::crearActa(){
     cout << "Ingrese nombre del trabajo:" << endl;
     getline(cin, nombreDelTrabajo);
 
+    cout << "Ingrese la fecha: " << endl;
+    getline(cin, fecha);
+
     cout << "Ingrese el ID del autor: " << endl;
     cin >> idPersona;
+
+    cout << "Ingrese el tipo de trabajo\n1. Aplicado\n2. De investigacion" << endl;
+    cin >> tipoTrabajo;
+
     autor = buscarPersona(idPersona);
     if(!autor.verificarExistenciaPersona()){
         cout << "No se encontro la persona. Se creara una." << endl;
@@ -104,13 +100,9 @@ void Maestria::crearActa(){
         autor = *listaPersonas.end();
     }
 
-    cout << "Ingrese la fecha: " << endl;
-    getline(cin, fecha);
-
     cout << "Ingresde el id del jurado uno" << endl;
     cin >> idJuradoUno;
     juradoUno = buscarJurado(idJuradoUno);
-
     if(!juradoUno.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearJurado();
@@ -120,7 +112,6 @@ void Maestria::crearActa(){
     cout << "Ingresde el id del jurado dos" << endl;
     cin >> idJuradoDos;
     juradoDos = buscarJurado(idJuradoDos);
-
     if(!juradoDos.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearJurado();
@@ -130,7 +121,6 @@ void Maestria::crearActa(){
     cout << "Ingresde el id del director" << endl;
     cin >> idDirector;
     director = buscarJurado(idDirector);
-
     if(!director.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearPersona();
@@ -139,7 +129,6 @@ void Maestria::crearActa(){
 
     cout << "Existe codirector\n1. Si\n2. No" << endl;
     cin >> opc;
-
     if( opc == 1 ){
         cout << "Ingresde el id del codirector" << endl;
         cin >> idCodirector;
@@ -152,7 +141,5 @@ void Maestria::crearActa(){
         }
     }
 
-    cout << "Ingrese el tipo de trabajo\n1. Aplicado\n2. De investigacion" << endl;
-    cin >> tipoTrabajo;
     this->listaActas.push_back(Acta(id, fecha, autor, nombreDelTrabajo, juradoUno, juradoDos, director, codirector, tipoTrabajo));
 }

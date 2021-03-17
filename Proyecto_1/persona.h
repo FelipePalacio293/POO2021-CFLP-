@@ -21,7 +21,6 @@ class Persona{
         Persona();
         Persona(string, string, int, int, string);
         void mostrarPersona();
-        Persona buscarPersona(int);
         int getId();
         void setId(int);
         int verificarExistenciaPersona();
