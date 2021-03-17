@@ -23,6 +23,8 @@ class Persona{
         void mostrarPersona();
         Persona buscarPersona(int);
         int getId();
+        void setId(int);
+        int verificarExistenciaPersona();
 };
 
 #endif

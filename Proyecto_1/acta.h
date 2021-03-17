@@ -16,8 +16,8 @@ enum TipoDeTrabajo{
     investigacion
 };
 enum EstadoActa{
-    rechazado,
-    aprobado
+    cerrado,
+    abierto
 };
 enum EstadoCalificacion{
     aprobado,

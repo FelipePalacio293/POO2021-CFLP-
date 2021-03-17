@@ -3,3 +3,21 @@
 Acta::Acta(){
 
 }
+
+Acta::Acta(int numero, string fecha, Persona autor, string nombreTrabajo, Jurado juradoUno, Jurado juradoDos, Persona director, Persona codirector, int tipoDeTrabajo){
+    this->numero = numero;
+    this->fecha = fecha;
+    this->autor = autor;
+    this->nombreTrabajo = nombreTrabajo;
+    this->juradoUno = juradoUno;
+    this->juradoDos = juradoDos;
+    this->director = director;
+    this->codirector = codirector;
+    this->numeroDeCriterios = 8;
+    this->estadoActa = abierto;
+    this->estadoCalificacion = pendiente;
+    if(tipoDeTrabajo == 1)
+        this->tipoTrabajo = aplicado;
+    else
+        this->tipoTrabajo = investigacion;
+}

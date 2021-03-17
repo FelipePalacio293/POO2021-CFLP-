@@ -7,6 +7,8 @@
 #include "jurado.h"
 #include "acta.h"
 
+using std::getline;
+
 class Maestria{
     private:
         list<Acta> listaActas;
