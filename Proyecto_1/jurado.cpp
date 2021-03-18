@@ -12,3 +12,7 @@ Jurado::Jurado(string nombre, string email, int id, int celular, string rol, int
         this->tipoJurado = interno;
     }
 }
+
+void Jurado::definirCalificaciones(){
+    
+}

@@ -21,3 +21,10 @@ Acta::Acta(int numero, string fecha, Persona autor, string nombreTrabajo, Jurado
     else
         this->tipoTrabajo = investigacion;
 }
+
+void Acta::calificarActa(){
+    int x;
+    for(x = 0; x < this->numeroDeCriterios; x++){
+        detallesCriterios.push_back(DetalleCriterio());
+    }
+}

@@ -65,8 +65,10 @@ void Jurado::mostrarJurado(){
     cout << tipoJurado << endl;
 }
 
+enum EstadoActa{
+    abierto = 1, cerrado
+};
+
 int main(){
-    Jurado jurado("Rafael", "123@gmail.com", 1232, 3434, 1);
-    jurado.mostrarJurado();
     return 0;
 }

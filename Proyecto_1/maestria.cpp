@@ -24,6 +24,9 @@ Jurado Maestria::buscarJurado(int id){
             return *it;
         }
     }
+    Jurado jurado;
+    jurado.setId(0);
+    return jurado;
 }
 
 void Maestria::crearPersona(){
@@ -69,7 +72,7 @@ void Maestria::crearJurado(){
     cout << "El jurado es: \n1. Interno\n2. Externo" << endl;
     cin >> tipoJurado;
 
-    listaPersonas.push_back(Jurado(nombre, email, id, celular, rol, tipoJurado));
+    listaJurados.push_back(Jurado(nombre, email, id, celular, rol, tipoJurado));
 }
 
 void Maestria::crearActa(){
@@ -102,6 +105,7 @@ void Maestria::crearActa(){
 
     cout << "Ingresde el id del jurado uno" << endl;
     cin >> idJuradoUno;
+
     juradoUno = buscarJurado(idJuradoUno);
     if(!juradoUno.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
@@ -111,6 +115,7 @@ void Maestria::crearActa(){
     
     cout << "Ingresde el id del jurado dos" << endl;
     cin >> idJuradoDos;
+
     juradoDos = buscarJurado(idJuradoDos);
     if(!juradoDos.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
@@ -120,7 +125,8 @@ void Maestria::crearActa(){
 
     cout << "Ingresde el id del director" << endl;
     cin >> idDirector;
-    director = buscarJurado(idDirector);
+
+    director = buscarPersona(idDirector);
     if(!director.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearPersona();
@@ -132,7 +138,8 @@ void Maestria::crearActa(){
     if( opc == 1 ){
         cout << "Ingresde el id del codirector" << endl;
         cin >> idCodirector;
-        codirector = buscarJurado(idCodirector);
+        
+        codirector = buscarPersona(idCodirector);
 
         if(!codirector.verificarExistenciaPersona()){
             cout << "No se encontro el jurado.Se creara una." << endl;

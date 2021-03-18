@@ -4,6 +4,7 @@
 #include <iostream>
 #include <list>
 #include "jurado.h"
+#include "detalleCriterio.h"
 
 using std::list;
 using std::cout;
@@ -39,9 +40,11 @@ class Acta{
         TipoDeTrabajo tipoTrabajo;
         EstadoActa estadoActa;
         EstadoCalificacion estadoCalificacion;
+        list<DetalleCriterio> detallesCriterios;
     public:
         Acta();
         Acta(int, string, Persona, string, Jurado, Jurado, Persona, Persona, int);
         void setEstadoActa();
+        void calificarActa();
 };
 #endif

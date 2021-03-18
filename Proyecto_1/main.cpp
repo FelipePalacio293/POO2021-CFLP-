@@ -1,5 +1,4 @@
-#include "jurado.h"
-#include "acta.h"
+#include "maestria.h"
 
 #include <list>
 
@@ -19,13 +18,14 @@ void mostrarMenu(){
 
 void menu(){
     int opc;
-    list<Acta> actas;
+    Maestria maestria;
     do
     {
         mostrarMenu();
         cin >> opc;
         switch(opc){
             case 1:
+                maestria.crearActa();
                 break;
             case 2:
                 break;
