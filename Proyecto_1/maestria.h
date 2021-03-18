@@ -15,12 +15,14 @@ class Maestria{
         list<Jurado> listaJurados;
         list<Persona> listaPersonas;
     public:
+        Maestria();
         Acta buscarActa(int);
         Persona buscarPersona(int);
         Jurado buscarJurado(int);
         void crearActa();
         void crearJurado();
         void crearPersona();
+        int verificarRolEstudiante(Persona);
 };
 
 #endif

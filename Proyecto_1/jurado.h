@@ -23,6 +23,8 @@ class Jurado : public Persona{
         Jurado(string, string, int, int, string, int);
         Jurado();
         void definirCalificaciones();
+        void mostrarJurado();
+        TipoJurado getTipoJurado();
 };
 
 #endif

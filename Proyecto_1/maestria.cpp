@@ -37,9 +37,11 @@ void Maestria::crearPersona(){
     cin >> id;
 
     cout << "Ingrese el nombre de la persona " << endl;
+    cin.ignore();
     getline(cin, nombre);
 
     cout << "Ingrese email de la persona " << endl;
+    cin.ignore();
     getline(cin, email);
 
     cout << "Ingrese el celular de la persona " << endl;
@@ -53,26 +55,31 @@ void Maestria::crearPersona(){
 
 void Maestria::crearJurado(){
     int id, celular, tipoJurado;
-    string nombre, email, rol;
+    string nombre, email, rol = "Jurado";
     cout << "Ingrese el id del jurado " << endl;
     cin >> id;
 
     cout << "Ingrese el nombre del jurado" << endl;
+    cin.ignore();
     getline(cin, nombre);
 
     cout << "Ingrese email del jurado " << endl;
+    cin.ignore();
     getline(cin, email);
 
     cout << "Ingrese el celular del jurado " << endl;
     cin >> celular;
 
-    cout << "Ingrese el rol del jurado " << endl;
-    cin >> rol;
-
     cout << "El jurado es: \n1. Interno\n2. Externo" << endl;
     cin >> tipoJurado;
 
     listaJurados.push_back(Jurado(nombre, email, id, celular, rol, tipoJurado));
+}
+
+int Maestria::verificarRolEstudiante(Persona persona){
+    if(persona.getRol() == "Estudiante")
+        return 1;
+    return 0;
 }
 
 void Maestria::crearActa(){
@@ -85,22 +92,27 @@ void Maestria::crearActa(){
     cin >> id;
 
     cout << "Ingrese nombre del trabajo:" << endl;
+    cin.ignore();
     getline(cin, nombreDelTrabajo);
 
     cout << "Ingrese la fecha: " << endl;
+    cin.ignore();
     getline(cin, fecha);
-
-    cout << "Ingrese el ID del autor: " << endl;
-    cin >> idPersona;
 
     cout << "Ingrese el tipo de trabajo\n1. Aplicado\n2. De investigacion" << endl;
     cin >> tipoTrabajo;
 
+    cout << "Ingrese el ID del autor: " << endl;
+    cin >> idPersona;
+
     autor = buscarPersona(idPersona);
+    verificarRolEstudiante(autor);
     if(!autor.verificarExistenciaPersona()){
         cout << "No se encontro la persona. Se creara una." << endl;
         crearPersona();
-        autor = *listaPersonas.end();
+        autor = *listaPersonas.rbegin();
+        autor.mostrarPersona();
+        break;
     }
 
     cout << "Ingresde el id del jurado uno" << endl;
@@ -110,7 +122,7 @@ void Maestria::crearActa(){
     if(!juradoUno.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearJurado();
-        juradoUno = *listaJurados.end();
+        juradoUno = *listaJurados.rbegin();
     }
     
     cout << "Ingresde el id del jurado dos" << endl;
@@ -120,7 +132,7 @@ void Maestria::crearActa(){
     if(!juradoDos.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearJurado();
-        juradoDos = *listaJurados.end();
+        juradoDos = *listaJurados.rbegin();
     }
 
     cout << "Ingresde el id del director" << endl;
@@ -130,7 +142,7 @@ void Maestria::crearActa(){
     if(!director.verificarExistenciaPersona()){
         cout << "No se encontro el jurado.Se creara una." << endl;
         crearPersona();
-        director = *listaPersonas.end();
+        director = *listaPersonas.rbegin();
     }
 
     cout << "Existe codirector\n1. Si\n2. No" << endl;
@@ -144,7 +156,7 @@ void Maestria::crearActa(){
         if(!codirector.verificarExistenciaPersona()){
             cout << "No se encontro el jurado.Se creara una." << endl;
             crearPersona();
-            codirector = *listaPersonas.end();
+            codirector = *listaPersonas.rbegin();
         }
     }
 

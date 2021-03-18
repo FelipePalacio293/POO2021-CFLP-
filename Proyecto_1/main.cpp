@@ -37,7 +37,7 @@ void menu(){
                 cout << "Opcion invalida" << endl;
         }
     } while ( opc != -1 );
-    
+
 }
 
 int main(){

@@ -16,3 +16,12 @@ Jurado::Jurado(string nombre, string email, int id, int celular, string rol, int
 void Jurado::definirCalificaciones(){
     
 }
+
+TipoJurado Jurado::getTipoJurado(){
+    return this->tipoJurado;
+}
+
+void Jurado::mostrarJurado(){
+    mostrarPersona();
+    cout << "Tipo jurado: " << getTipoJurado() << endl;
+}

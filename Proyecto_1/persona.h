@@ -23,6 +23,10 @@ class Persona{
         void mostrarPersona();
         int getId();
         void setId(int);
+        string getNombre();
+        string getEmail();
+        int getCelular();
+        string getRol();
         int verificarExistenciaPersona();
 };
 

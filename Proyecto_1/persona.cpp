@@ -19,6 +19,22 @@ void Persona::setId(int id){
     this->id = id;
 }
 
+string Persona::getNombre(){
+    return this->nombre;
+}
+
+string Persona::getEmail(){
+    return this->email;
+}
+
+int Persona::getCelular(){
+    return this->celular;
+}
+
+string Persona::getRol(){
+    return this->rol;
+}
+
 int Persona::verificarExistenciaPersona(){
     if(this->id == 0){
         return 0;
@@ -26,4 +42,12 @@ int Persona::verificarExistenciaPersona(){
     else{
         return 1;
     }
+}
+
+void Persona::mostrarPersona(){
+    cout << "Id: " << getId() << endl;
+    cout << "Nombre: " << getNombre() << endl;
+    cout << "Email: " << getEmail() << endl;
+    cout << "Celular: " << getCelular() << endl;
+    cout << "Rol: " << getRol() << endl;
 }
