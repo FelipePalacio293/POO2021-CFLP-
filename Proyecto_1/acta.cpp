@@ -28,3 +28,23 @@ void Acta::calificarActa(){
         detallesCriterios.push_back(DetalleCriterio());
     }
 }
+
+int Acta::getNumero(){
+    return this->numero;
+}
+
+Jurado Acta::getJuradoUno(){
+    return this->juradoUno;
+}
+
+Jurado Acta::getJuradoDos(){
+    return this->juradoDos;
+}
+
+void Acta::setListaDetalles(list<DetalleCriterio> detallesCriterios){
+    this->detallesCriterios = detallesCriterios;
+}
+
+list<DetalleCriterio> Acta::getListaDetalles(){
+    return this->detallesCriterios;
+}

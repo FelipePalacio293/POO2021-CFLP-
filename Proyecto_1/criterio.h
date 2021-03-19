@@ -18,6 +18,9 @@ class Criterio{
     public:
         Criterio();
         Criterio(string, float);
+        void setDescripcionCriterio(string);
+        void setPonderado(float);
+        void mostrarDescripcion();
 };
 
 #endif

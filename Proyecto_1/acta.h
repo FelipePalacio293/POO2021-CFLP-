@@ -46,5 +46,10 @@ class Acta{
         Acta(int, string, Persona, string, Jurado, Jurado, Persona, Persona, int);
         void setEstadoActa();
         void calificarActa();
+        void setListaDetalles(list<DetalleCriterio>);
+        int getNumero();
+        Jurado getJuradoUno();
+        Jurado getJuradoDos();
+        list<DetalleCriterio> getListaDetalles();
 };
 #endif

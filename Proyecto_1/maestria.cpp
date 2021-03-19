@@ -3,6 +3,14 @@
 Maestria::Maestria(){
 }
 
+void Maestria::setDummyData(){
+    listaPersonas.push_back(Persona("Santiago Grisales", "santi@gmail.com", 001, 32434, "Estudiante"));
+    listaPersonas.push_back(Persona("Gerardo Sarria", "gerar@gmail.com", 002, 43435, "Director"));
+    listaPersonas.push_back(Persona("Luisa Rincon", "lufe@gmail.com", 003, 34345, "Codirector"));
+    listaJurados.push_back(Jurado("Fabian Ledezma", "Fabian@gmail.com", 004, 34345, "Jurado", 1));
+    listaJurados.push_back(Jurado("Juan Orozco", "juan@gmail.com", 005, 465634, "Jurado", 1));
+}
+
 Persona Maestria::buscarPersona(int id){
     for(list<Persona>::iterator it = listaPersonas.begin(); it != listaPersonas.end(); it++)
     {
@@ -76,20 +84,14 @@ void Maestria::crearJurado(){
     listaJurados.push_back(Jurado(nombre, email, id, celular, rol, tipoJurado));
 }
 
-int Maestria::verificarRolEstudiante(Persona persona){
-    if(persona.getRol() == "Estudiante")
-        return 1;
-    return 0;
-}
-
 void Maestria::crearActa(){
-    int id, idPersona, opc, idJuradoUno, idJuradoDos, idDirector, idCodirector, tipoTrabajo;
+    int idActa, idPersona, opc, idJuradoUno, idJuradoDos, idDirector, idCodirector, tipoTrabajo;
     string fecha, nombreDelTrabajo;
     Persona autor, director, codirector;
     Jurado juradoUno, juradoDos;
 
     cout << "Ingrese el ID del acta:" << endl;
-    cin >> id;
+    cin >> idActa;
 
     cout << "Ingrese nombre del trabajo:" << endl;
     cin.ignore();
@@ -106,13 +108,11 @@ void Maestria::crearActa(){
     cin >> idPersona;
 
     autor = buscarPersona(idPersona);
-    verificarRolEstudiante(autor);
     if(!autor.verificarExistenciaPersona()){
         cout << "No se encontro la persona. Se creara una." << endl;
         crearPersona();
         autor = *listaPersonas.rbegin();
         autor.mostrarPersona();
-        break;
     }
 
     cout << "Ingresde el id del jurado uno" << endl;
@@ -160,5 +160,84 @@ void Maestria::crearActa(){
         }
     }
 
-    this->listaActas.push_back(Acta(id, fecha, autor, nombreDelTrabajo, juradoUno, juradoDos, director, codirector, tipoTrabajo));
+    this->listaActas.push_back(Acta(idActa, fecha, autor, nombreDelTrabajo, juradoUno, juradoDos, director, codirector, tipoTrabajo));
+}
+
+void Maestria::crearCriterios(){
+    int x, idActa;
+    list<DetalleCriterio> detalles;
+    Acta acta;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    acta = buscarActa(idActa);
+
+    for(x = 0; x < 8; x++){
+        DetalleCriterio detalleCriterios;
+        detalleCriterios.definirCriterio();
+        detalles.push_back(detalleCriterios);
+    }
+    acta.setListaDetalles(detalles);
+}
+
+void Maestria::diligenciarCalificaciones(){
+    int idActa;
+    float nota;
+    Acta acta;
+    Jurado juradoUno, juradoDos;
+    list<DetalleCriterio> detalles;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    acta = buscarActa(idActa);
+
+    detalles = acta.getListaDetalles();
+
+    juradoUno = acta.getJuradoUno();
+    juradoDos = acta.getJuradoDos();
+
+    for(list<DetalleCriterio>::iterator it = detalles.begin(); it != detalles.end(); it++)
+    {
+        cout << "Ingrese la nota del jurado uno para el criterio:" << endl;
+        it->mostrarCriterio();
+        cin >> nota;
+        it->setNotaJuradoUno(nota);
+        cout << "Ingrese la nota del jurado dos para el mismo criterio:" << endl;
+        cin >> nota;
+        it->setNotaJuradoDos(nota);
+    }
+}
+
+void Maestria::ingresarComentarios(){
+    int idActa;
+    string comentarios;
+    Acta acta;
+    list<DetalleCriterio> detalles;
+    Jurado juradoUno, juradoDos;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    acta = buscarActa(idActa);
+
+    detalles = acta.getListaDetalles();
+
+    juradoUno = acta.getJuradoUno();
+    juradoDos = acta.getJuradoDos();
+
+    for(list<DetalleCriterio>::iterator it = detalles.begin(); it != detalles.end(); it++)
+    {
+        cout << "Ingrese los comentarios de los jurados para el criterio:" << endl;
+        it->mostrarCriterio();
+        getline(cin, comentarios);
+    }
+}
+
+Acta Maestria::buscarActa(int idActa){
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++)
+    {
+        if(it->getNumero() == idActa)
+        {
+            return *it;
+        }
+    }
 }

@@ -19,6 +19,7 @@ void mostrarMenu(){
 void menu(){
     int opc;
     Maestria maestria;
+    maestria.setDummyData();
     do
     {
         mostrarMenu();
@@ -28,8 +29,10 @@ void menu(){
                 maestria.crearActa();
                 break;
             case 2:
+                maestria.crearCriterios();
                 break;
             case 3:
+                maestria.diligenciarCalificaciones();
                 break;
             case 4:
                 break;

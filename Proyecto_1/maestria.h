@@ -16,13 +16,17 @@ class Maestria{
         list<Persona> listaPersonas;
     public:
         Maestria();
-        Acta buscarActa(int);
         Persona buscarPersona(int);
         Jurado buscarJurado(int);
         void crearActa();
         void crearJurado();
         void crearPersona();
         int verificarRolEstudiante(Persona);
+        void diligenciarCalificaciones();
+        Acta buscarActa(int);
+        void crearCriterios();
+        void setDummyData();
+        void ingresarComentarios();
 };
 
 #endif

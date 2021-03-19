@@ -4,6 +4,7 @@
 #include <iostream>
 #include <list>
 #include "persona.h"
+#include "detalleCriterio.h"
 
 using std::list;
 using std::cout;
@@ -22,7 +23,7 @@ class Jurado : public Persona{
     public:
         Jurado(string, string, int, int, string, int);
         Jurado();
-        void definirCalificaciones();
+        DetalleCriterio definirCalificaciones(DetalleCriterio);
         void mostrarJurado();
         TipoJurado getTipoJurado();
 };

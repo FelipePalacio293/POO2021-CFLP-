@@ -13,8 +13,12 @@ Jurado::Jurado(string nombre, string email, int id, int celular, string rol, int
     }
 }
 
-void Jurado::definirCalificaciones(){
-    
+DetalleCriterio Jurado::definirCalificaciones(DetalleCriterio detalleCriterio){
+    float nota;
+    cout << "Ingrese la nota del ponderado " << endl;
+    cin >> nota;
+    detalleCriterio.setNotaJuradoUno(nota);
+    return detalleCriterio;
 }
 
 TipoJurado Jurado::getTipoJurado(){

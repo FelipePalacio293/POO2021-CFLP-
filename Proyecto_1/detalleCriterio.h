@@ -15,6 +15,11 @@ class DetalleCriterio{
         DetalleCriterio();
         DetalleCriterio(Criterio, float, float, string);
         void crearCriterio();
+        void setNotaJuradoUno(float);
+        void setNotaJuradoDos(float);
+        void definirCriterio();
+        void mostrarCriterio();
+        void setComentario(string);
 };
 
 #endif

@@ -15,6 +15,8 @@ CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj: ../criterio.h
 CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj: ../detalleCriterio.cpp
 CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj: ../detalleCriterio.h
 
+CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: ../criterio.h
+CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: ../detalleCriterio.h
 CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: ../jurado.cpp
 CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: ../jurado.h
 CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: ../persona.h
