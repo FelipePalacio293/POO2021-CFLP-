@@ -47,3 +47,15 @@ void DetalleCriterio::mostrarCriterio(){
 void DetalleCriterio::setComentario(string comentarios){
     this->comentarios = comentarios;
 }
+
+void DetalleCriterio::calcularNotaPonderado(){
+    this->notaPonderado = (this->notaJuradoUno + this->notaJuradoUno) * criterio.getPonderado();
+}
+
+void DetalleCriterio::calcularNotaPromedio(){
+    this->notaPromedio = ((this->notaJuradoUno + this->notaJuradoDos) / 2) * criterio.getPonderado();
+}
+
+float DetalleCriterio::getNotaPromedio(){
+    return this->notaPromedio;
+}

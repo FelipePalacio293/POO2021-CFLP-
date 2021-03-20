@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/acta.cpp
+acta.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/acta.h
+
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/acta.h
 iostream
 -
@@ -22,9 +26,17 @@ iostream
 list
 -
 
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.cpp
+detalleCriterio.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.h
+
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.h
 criterio.h
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/criterio.h
+
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.cpp
+jurado.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.h
 
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.h
 iostream
@@ -49,6 +61,12 @@ jurado.h
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.h
 acta.h
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/acta.h
+
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/main.cpp
+maestria.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/maestria.h
+list
+-
 
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/persona.h
 iostream

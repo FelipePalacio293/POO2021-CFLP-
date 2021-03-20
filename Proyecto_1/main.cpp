@@ -14,7 +14,11 @@ void mostrarMenu(){
     cout << "3. Crear jurado." << endl;
     cout << "4. Diligenciar criterios." << endl;
     cout << "5. Diligenciar calificaciones." << endl;
-    cout << "6. Diligenciar comentarios." << endl;
+    cout << "6. Mostrar todos los criterios." << endl;
+    cout << "7. Diligenciar comentarios." << endl;
+    cout << "8. Obtener nota final de un acta." << endl;
+    cout << "9. Cerrar acta." << endl;
+    cout << "10. Mostrar todas las actas." << endl;
 }
 
 void menu(){
@@ -47,11 +51,18 @@ void menu(){
             case 7:
                 maestria.diligenciarComentarios();
                 break;
+            case 8:
+                maestria.obtenerNotaFinalDeUnActa();
+                break;
+            case 9:
+                maestria.cerrarUnActa();
+                break;
+            case 10:
+                maestria.mostrarTodasLasActas();
             default:
                 cout << "Opcion invalida" << endl;
         }
     } while ( opc != -1 );
-
 }
 
 int main(){

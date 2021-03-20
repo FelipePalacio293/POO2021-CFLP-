@@ -20,3 +20,7 @@ void Criterio::setPonderado(float ponderado){
 void Criterio::mostrarDescripcion(){
     cout << this->descripcionCriterio << endl;
 }
+
+float Criterio::getPonderado(){
+    return this->ponderado;
+}

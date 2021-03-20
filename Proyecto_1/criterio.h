@@ -21,6 +21,7 @@ class Criterio{
         void setDescripcionCriterio(string);
         void setPonderado(float);
         void mostrarDescripcion();
+        float getPonderado();
 };
 
 #endif

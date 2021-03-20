@@ -41,6 +41,8 @@ class Acta{
         EstadoActa estadoActa;
         EstadoCalificacion estadoCalificacion;
         list<DetalleCriterio> detallesCriterios;
+        int puedeCalificarse;
+        float notaFinal;
     public:
         Acta();
         Acta(int, string, Persona, string, Jurado, Jurado, Persona, Persona, int);
@@ -55,5 +57,10 @@ class Acta{
         void ingresarCaLificaciones();
         void llenarCriterios();
         void mostrarDetalleCriterio();
+        void sacarNotaFinalActa();
+        void definirEstadoCalificacion();
+        void cerrarActa();
+        void mostrarDatos();
+        EstadoActa getEstadoActa();
 };
 #endif

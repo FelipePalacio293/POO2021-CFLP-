@@ -29,6 +29,10 @@ class Maestria{
         void diligenciarComentarios();
         void mostrarTodosLosCriterios();
         void actualizarActa(int);
+        void obtenerNotaFinalDeUnActa();
+        void cerrarUnActa();
+        void mostrarTodasLasActas();
+        void listarActasPorEstado();
 };
 
 #endif

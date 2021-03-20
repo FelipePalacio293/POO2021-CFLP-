@@ -220,7 +220,6 @@ Acta Maestria::buscarActa(int idActa){
 
 void Maestria::mostrarTodosLosCriterios(){
     int idActa;
-    Acta acta;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
@@ -229,5 +228,56 @@ void Maestria::mostrarTodosLosCriterios(){
             it->mostrarDetalleCriterio();
             break;
         }
+    }
+}
+void Maestria::obtenerNotaFinalDeUnActa(){
+    int idActa;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getNumero() == idActa){
+            it->sacarNotaFinalActa();
+            break;
+        }
+    }
+}
+
+void Maestria::cerrarUnActa(){
+    int idActa;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getNumero() == idActa){
+            it->cerrarActa();
+        }
+    }
+}
+
+void Maestria::mostrarTodasLasActas(){
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        it->mostrarDatos();
+    }
+}
+
+void Maestria::listarActasPorEstado(){
+    int idActa, estado;
+    EstadoActa estadoUsuario;
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+
+    cout << "Ingrese el tipo de acta que desea consultar:\n1.Abiertas\n2.Cerradas" << endl;
+    cin >> estado;
+    if(estado == 1){
+        estadoUsuario = abierto;
+    }
+    else{
+        estadoUsuario = cerrado;
+    }
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getEstadoActa() == estadoUsuario)
+            it->mostrarDatos();
     }
 }

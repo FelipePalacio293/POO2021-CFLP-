@@ -12,20 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23b02567-2750-4c35-ab0b-b839818edd34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/TareaPOO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acta.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/acta.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acta.h" beforeDir="false" afterPath="$PROJECT_DIR$/acta.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/criterio.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/criterio.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/jurado.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/jurado.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/criterio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/criterio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/criterio.h" beforeDir="false" afterPath="$PROJECT_DIR$/criterio.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/detalleCriterio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/detalleCriterio.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/detalleCriterio.h" beforeDir="false" afterPath="$PROJECT_DIR$/detalleCriterio.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maestria.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/maestria.cpp" afterDir="false" />
@@ -61,6 +61,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -77,11 +78,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,7 +88,9 @@
       <option name="presentableId" value="Default" />
       <updated>1616103496089</updated>
       <workItem from="1616103497675" duration="5972000" />
-      <workItem from="1616188935772" duration="16422000" />
+      <workItem from="1616188935772" duration="21271000" />
+      <workItem from="1616215466769" duration="29000" />
+      <workItem from="1616216722537" duration="4939000" />
     </task>
     <servers />
   </component>
