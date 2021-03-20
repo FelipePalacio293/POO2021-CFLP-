@@ -12,10 +12,8 @@ void Maestria::setDummyData(){
 }
 
 Persona Maestria::buscarPersona(int id){
-    for(list<Persona>::iterator it = listaPersonas.begin(); it != listaPersonas.end(); it++)
-    {
-        if(it->getId() == id)
-        {
+    for(list<Persona>::iterator it = listaPersonas.begin(); it != listaPersonas.end(); it++){
+        if(it->getId() == id){
             return *it;
         }
     }
@@ -25,10 +23,8 @@ Persona Maestria::buscarPersona(int id){
 }
 
 Jurado Maestria::buscarJurado(int id){
-    for(list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++)
-    {
-        if(it->getId() == id)
-        {
+    for(list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++){
+        if(it->getId() == id){
             return *it;
         }
     }
@@ -279,5 +275,70 @@ void Maestria::listarActasPorEstado(){
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
         if(it->getEstadoActa() == estadoUsuario)
             it->mostrarDatos();
+    }
+}
+
+void Maestria::mostrarTrabajosPorTipo(TipoDeTrabajo tipo){
+    int cont = 0;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getTipoDeTrabajo() == tipo){
+            it->mostrarDatos();
+            cont++;
+        }
+    }
+    cout << "La cantidad de trabajos aplicados fueron: " << cont << endl;
+}
+
+void Maestria::mostrarTrabajosPorProfesor(){
+    int idProfesor, contProfesor;
+    cout << "Ingrese el ID del profesor que desea buscar:" << endl;
+    cin >> idProfesor;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        contProfesor += it->buscarProfesorDado(idProfesor);
+    }
+}
+
+void Maestria::mostrarTrabajoPorJurado(){
+    int idJurado;
+    cout << "Ingrese el ID del profesor que desea buscar:" << endl;
+    cin >> idJurado;
+    cout << "La persona ha sido jurado de los siguientes proyectos:" << endl;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        it->mostrarTrabajoJurado(idJurado);
+    }
+}
+
+void Maestria::mostrarTodosLosJurados(){
+    for(list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++){
+        it->mostrarJurado();
+    }
+}
+
+void Maestria::mostrarActasPorEstadoCalificacion(){
+    cout << "Se imprimiran las actas pendientes y rechazadas" << endl;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getEstadoCalificacion() == rechazado || it->getEstadoCalificacion() == pendiente){
+            it->mostrarDatos();
+        }
+    }
+}
+
+void Maestria::consultarJuradosPorTipo(TipoJurado tipo){
+    for(list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++){
+        if(it->getTipoJurado() == tipo)
+            it->mostrarJurado();
+    }
+}
+
+void Maestria::eliminarActa(){
+    int idActa;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getNumero() == idActa){
+            listaActas.erase(it);
+            break;
+        }
     }
 }

@@ -33,6 +33,13 @@ class Maestria{
         void cerrarUnActa();
         void mostrarTodasLasActas();
         void listarActasPorEstado();
+        void mostrarTrabajosPorTipo(TipoDeTrabajo);
+        void mostrarTrabajosPorProfesor();
+        void mostrarTrabajoPorJurado();
+        void mostrarTodosLosJurados();
+        void mostrarActasPorEstadoCalificacion();
+        void consultarJuradosPorTipo(TipoJurado);
+        void eliminarActa();
 };
 
 #endif

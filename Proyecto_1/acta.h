@@ -62,5 +62,9 @@ class Acta{
         void cerrarActa();
         void mostrarDatos();
         EstadoActa getEstadoActa();
+        TipoDeTrabajo getTipoDeTrabajo();
+        int buscarProfesorDado(int);
+        void mostrarTrabajoJurado(int);
+        EstadoCalificacion getEstadoCalificacion();
 };
 #endif

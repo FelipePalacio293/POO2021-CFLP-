@@ -19,6 +19,16 @@ void mostrarMenu(){
     cout << "8. Obtener nota final de un acta." << endl;
     cout << "9. Cerrar acta." << endl;
     cout << "10. Mostrar todas las actas." << endl;
+    cout << "11. Listar las actas por estado." << endl;
+    cout << "12. Consultar cuantos y cuales trabajos estan relacionados con industria." << endl;
+    cout << "13. Consultar cuantos y cuales trabajos estan relacionados con investigacion." << endl;
+    cout << "14. Consultar trabajos dados por un profesor." << endl;
+    cout << "15. Consultrar trabajos dados por un jurado." << endl;
+    cout << "16. Mostrar todos los jurados." << endl;
+    cout << "17. Mostrar las actas rechazadas y pendientes." << endl;
+    cout << "18. Consultar jurados externos." << endl;
+    cout << "19. Consultar jurados internos." << endl;
+    cout << "20. Eliminar un acta." << endl;
 }
 
 void menu(){
@@ -59,6 +69,37 @@ void menu(){
                 break;
             case 10:
                 maestria.mostrarTodasLasActas();
+                break;
+            case 11:
+                maestria.listarActasPorEstado();
+                break;
+            case 12:
+                maestria.mostrarTrabajosPorTipo(aplicado);
+                break;
+            case 13:
+                maestria.mostrarTrabajosPorTipo(investigacion);
+                break;
+            case 14:
+                maestria.mostrarTrabajosPorProfesor();
+                break;
+            case 15:
+                maestria.mostrarTrabajoPorJurado();
+                break;
+            case 16:
+                maestria.mostrarTodosLosJurados();
+                break;
+            case 17:
+                maestria.mostrarActasPorEstadoCalificacion();
+                break;
+            case 18:
+                maestria.consultarJuradosPorTipo(interno);
+                break;
+            case 19:
+                maestria.consultarJuradosPorTipo(externo);
+                break;
+            case 20:
+                maestria.eliminarActa();
+                break;
             default:
                 cout << "Opcion invalida" << endl;
         }

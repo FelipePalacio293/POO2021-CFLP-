@@ -153,3 +153,25 @@ void Acta::mostrarDatos(){
 EstadoActa Acta::getEstadoActa(){
     return this->estadoActa;
 }
+
+TipoDeTrabajo Acta::getTipoDeTrabajo(){
+    return this->tipoTrabajo;
+}
+
+int Acta::buscarProfesorDado(int idProfesor){
+    if(this->director.getId() == idProfesor || this->codirector.getId() == idProfesor || this->juradoUno.getId() == idProfesor || this->juradoUno.getId() == idProfesor){
+        cout << "El profesor ha participado en el acta:" << endl;
+        mostrarDatos();
+        return 1;
+    }
+    return 0;
+}
+
+void Acta::mostrarTrabajoJurado(int idJurado){
+    if(idJurado == juradoUno.getId() || idJurado == juradoDos.getId())
+        mostrarDatos();
+}
+
+EstadoCalificacion Acta::getEstadoCalificacion(){
+    return this->estadoCalificacion;
+}
