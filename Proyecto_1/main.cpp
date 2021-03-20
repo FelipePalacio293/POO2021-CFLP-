@@ -9,11 +9,12 @@ using std::endl;
 using std::string;
 
 void mostrarMenu(){
-    cout << "1. Agregar persona." << endl;
-    cout << "2. Agregar jurado." << endl;
-    cout << "3. Crear acta." << endl;
-    cout << "4. XXXX." << endl;
-    cout << "5. XXXXX." << endl;
+    cout << "1. Crear acta." << endl;
+    cout << "2. Crear persona." << endl;
+    cout << "3. Crear jurado." << endl;
+    cout << "4. Diligenciar criterios." << endl;
+    cout << "5. Diligenciar calificaciones." << endl;
+    cout << "6. Diligenciar comentarios." << endl;
 }
 
 void menu(){
@@ -29,12 +30,22 @@ void menu(){
                 maestria.crearActa();
                 break;
             case 2:
-                maestria.crearCriterios();
+                maestria.crearPersona();
                 break;
             case 3:
-                maestria.diligenciarCalificaciones();
+                maestria.crearJurado();
                 break;
             case 4:
+                maestria.crearCriterios();
+                break;
+            case 5:
+                maestria.diligenciarCalificaciones();
+                break;
+            case 6:
+                maestria.mostrarTodosLosCriterios();
+                break;
+            case 7:
+                maestria.diligenciarComentarios();
                 break;
             default:
                 cout << "Opcion invalida" << endl;

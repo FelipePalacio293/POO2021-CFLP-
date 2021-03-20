@@ -26,7 +26,9 @@ class Maestria{
         Acta buscarActa(int);
         void crearCriterios();
         void setDummyData();
-        void ingresarComentarios();
+        void diligenciarComentarios();
+        void mostrarTodosLosCriterios();
+        void actualizarActa(int);
 };
 
 #endif

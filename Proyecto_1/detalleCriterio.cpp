@@ -4,6 +4,10 @@ DetalleCriterio::DetalleCriterio(){
 
 }
 
+DetalleCriterio::DetalleCriterio(string descripcion, float ponderado){
+
+}
+
 void DetalleCriterio::crearCriterio(){
     string descripcionCriterio;
     float ponderado;

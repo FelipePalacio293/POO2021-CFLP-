@@ -48,3 +48,43 @@ void Acta::setListaDetalles(list<DetalleCriterio> detallesCriterios){
 list<DetalleCriterio> Acta::getListaDetalles(){
     return this->detallesCriterios;
 }
+
+void Acta::ingresarComentarios(){
+    string comentarios;
+
+    for(list<DetalleCriterio>::iterator it = this->detallesCriterios.begin(); it != this->detallesCriterios.end(); it++){
+        cout << "Ingrese los comentarios de los jurados para el criterio:" << endl;
+        it->mostrarCriterio();
+        getline(cin, comentarios);
+    }
+}
+
+void Acta::ingresarCaLificaciones(){
+    float nota;
+    cout << "He llegado hasta aqui 1" << endl;
+    for(list<DetalleCriterio>::iterator it = this->detallesCriterios.begin(); it != this->detallesCriterios.end(); it++){
+        cout << "Ingrese la nota del jurado uno para el criterio:" << endl;
+        it->mostrarCriterio();
+        cin >> nota;
+        it->setNotaJuradoUno(nota);
+        cout << "Ingrese la nota del jurado dos para el mismo criterio:" << endl;
+        cin >> nota;
+        it->setNotaJuradoDos(nota);
+    }
+}
+
+void Acta::llenarCriterios(){
+    int x;
+    DetalleCriterio detalleCriterio;
+    for(x = 0; x < 8; x++){
+        detalleCriterio.definirCriterio();
+        this->detallesCriterios.push_back(detalleCriterio);
+    }
+}
+
+void Acta::mostrarDetalleCriterio(){
+    DetalleCriterio detalleTemp;
+    for(list<DetalleCriterio>::iterator it = detallesCriterios.begin(); it != detallesCriterios.end(); it++){
+        it->mostrarCriterio();
+    }
+}

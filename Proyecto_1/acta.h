@@ -51,5 +51,9 @@ class Acta{
         Jurado getJuradoUno();
         Jurado getJuradoDos();
         list<DetalleCriterio> getListaDetalles();
+        void ingresarComentarios();
+        void ingresarCaLificaciones();
+        void llenarCriterios();
+        void mostrarDetalleCriterio();
 };
 #endif

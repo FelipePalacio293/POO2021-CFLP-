@@ -13,6 +13,7 @@ class DetalleCriterio{
         float notaPromedio;
     public:
         DetalleCriterio();
+        DetalleCriterio(string, float);
         DetalleCriterio(Criterio, float, float, string);
         void crearCriterio();
         void setNotaJuradoUno(float);
