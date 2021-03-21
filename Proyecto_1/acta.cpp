@@ -175,3 +175,34 @@ void Acta::mostrarTrabajoJurado(int idJurado){
 EstadoCalificacion Acta::getEstadoCalificacion(){
     return this->estadoCalificacion;
 }
+
+void Acta::guardarInformacionArchivoTexto(){
+    ofstream file;
+    string nombreArchivo = this->nombreTrabajo;
+    nombreArchivo += ".txt";
+    file.open(nombreArchivo.c_str(), ios::out);
+    file << "  ---  Acta de evaluacion de trabajo de grado  ---  " << endl;
+    file << "Trabajo de grado denominado: " << this->nombreTrabajo << endl;
+    file << "Autor: " << this->autor.getNombre() << "   " << this->autor.getId() << endl;
+    file << "Periodo: " << this->fecha << endl;
+    file << "Enfasis en: Sistemas y computacion\n" << endl;
+    string tipo, actaEstado, calificacionEstado;
+    if(this->tipoTrabajo == 0)
+        file << "Modalidad: Aplicado\n" << endl;
+    else
+        file << "Modalidad: Investigacion\n" << endl;
+    file << "Jurado 1: " << this->juradoUno.getNombre() << "\n" << endl;
+    file << "Jurado 2: " << this->juradoDos.getNombre() << "\n\n\n" << endl;
+    file << "En atención al desarrollo de este Trabajo de Grado y al documento y sustentación que presentó el(la) autor(a), los  Jurados  damos  las  siguientes  calificaciones  parciales  y  observaciones  (los  criterios  a  evaluar  y  sus ponderaciones se estipulan en el artículo 7.1 de las Directrices para Trabajo de Grado de Maestría)\n\n\n" << endl;
+    int cont = 0;
+    for(list<DetalleCriterio>::iterator it = this->detallesCriterios.begin(); it != detallesCriterios.end(); it++){
+        file << cont << ". " << it->getDescripcionCriterio() << ":\n\n" << endl;
+        file << "Calificacion parcial: " << it->getNotaPromedio() << "                    Ponderacion: " << it->getPonderadoCriterio() << "%\n\n" << endl;
+        file << it->getComentario() << "\n\n" << endl;
+        file << "---------------------------------------------------------------------" << endl;
+        cont++;
+    }
+
+    file.close();
+
+}

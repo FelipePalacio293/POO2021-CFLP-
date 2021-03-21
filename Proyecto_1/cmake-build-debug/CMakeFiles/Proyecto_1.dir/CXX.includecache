@@ -15,10 +15,16 @@ iostream
 -
 list
 -
+fstream
+-
 jurado.h
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.h
 detalleCriterio.h
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.h
+
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/criterio.cpp
+criterio.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/criterio.h
 
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/criterio.h
 iostream
@@ -26,9 +32,17 @@ iostream
 list
 -
 
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.cpp
+detalleCriterio.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.h
+
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.h
 criterio.h
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/criterio.h
+
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.cpp
+jurado.h
+C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.h
 
 C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.h
 iostream

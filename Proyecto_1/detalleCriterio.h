@@ -24,6 +24,9 @@ class DetalleCriterio{
         void calcularNotaPonderado();
         void calcularNotaPromedio();
         float getNotaPromedio();
+        string getDescripcionCriterio();
+        float getPonderadoCriterio();
+        string getComentario();
 };
 
 #endif

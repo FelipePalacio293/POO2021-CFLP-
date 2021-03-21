@@ -40,6 +40,7 @@ class Maestria{
         void mostrarActasPorEstadoCalificacion();
         void consultarJuradosPorTipo(TipoJurado);
         void eliminarActa();
+        void generarArchivoDeTexto();
 };
 
 #endif

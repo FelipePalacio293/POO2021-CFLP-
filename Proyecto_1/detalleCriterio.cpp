@@ -59,3 +59,15 @@ void DetalleCriterio::calcularNotaPromedio(){
 float DetalleCriterio::getNotaPromedio(){
     return this->notaPromedio;
 }
+
+string DetalleCriterio::getDescripcionCriterio(){
+    return this->criterio.getDescripcion();
+}
+
+float DetalleCriterio::getPonderadoCriterio(){
+    return this->criterio.getPonderado();
+}
+
+string DetalleCriterio::getComentario(){
+    return this->comentarios;
+}

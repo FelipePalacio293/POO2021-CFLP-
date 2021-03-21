@@ -3,14 +3,11 @@
 
 #include <iostream>
 #include <list>
+#include <fstream>
 #include "jurado.h"
 #include "detalleCriterio.h"
 
-using std::list;
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
+using namespace std;
 
 enum TipoDeTrabajo{
     aplicado, 
@@ -66,5 +63,6 @@ class Acta{
         int buscarProfesorDado(int);
         void mostrarTrabajoJurado(int);
         EstadoCalificacion getEstadoCalificacion();
+        void guardarInformacionArchivoTexto();
 };
 #endif

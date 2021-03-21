@@ -342,3 +342,16 @@ void Maestria::eliminarActa(){
         }
     }
 }
+
+void Maestria::generarArchivoDeTexto(){
+    int idActa;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getNumero() == idActa){
+            it->guardarInformacionArchivoTexto();
+            break;
+        }
+    }
+}

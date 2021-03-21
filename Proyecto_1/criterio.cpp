@@ -24,3 +24,7 @@ void Criterio::mostrarDescripcion(){
 float Criterio::getPonderado(){
     return this->ponderado;
 }
+
+string Criterio::getDescripcion(){
+    return this->descripcionCriterio;
+}
