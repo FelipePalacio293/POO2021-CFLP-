@@ -29,6 +29,7 @@ void mostrarMenu(){
     cout << "18. Consultar jurados externos." << endl;
     cout << "19. Consultar jurados internos." << endl;
     cout << "20. Eliminar un acta." << endl;
+    cout << "21. Generar archivo de texto con los datos." << endl;
 }
 
 void menu(){
@@ -99,6 +100,9 @@ void menu(){
                 break;
             case 20:
                 maestria.eliminarActa();
+                break;
+            case 21:
+                maestria.generarArchivoDeTexto();
                 break;
             default:
                 cout << "Opcion invalida" << endl;

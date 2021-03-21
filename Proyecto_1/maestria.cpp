@@ -214,6 +214,18 @@ Acta Maestria::buscarActa(int idActa){
     }
 }
 
+list<Acta>::iterator Maestria::obtenerActa(){
+    int idActa;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getNumero() == idActa){
+            return it;
+        }
+    }
+}
+
 void Maestria::mostrarTodosLosCriterios(){
     int idActa;
 
@@ -259,10 +271,8 @@ void Maestria::mostrarTodasLasActas(){
 }
 
 void Maestria::listarActasPorEstado(){
-    int idActa, estado;
+    int estado;
     EstadoActa estadoUsuario;
-    cout << "Ingrese el ID del acta:" << endl;
-    cin >> idActa;
 
     cout << "Ingrese el tipo de acta que desea consultar:\n1.Abiertas\n2.Cerradas" << endl;
     cin >> estado;
