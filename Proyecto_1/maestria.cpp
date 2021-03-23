@@ -3,15 +3,18 @@
 Maestria::Maestria(){
 }
 
+// Se hace set de unos datos de apoyo para facilitar las pruebas del programa
+
 void Maestria::setDummyData(){
     listaPersonas.push_back(Persona("Santiago Grisales", "santi@gmail.com", 001, 32434, "Estudiante"));
     listaPersonas.push_back(Persona("Gerardo Sarria", "gerar@gmail.com", 002, 43435, "Director"));
     listaPersonas.push_back(Persona("Luisa Rincon", "lufe@gmail.com", 003, 34345, "Codirector"));
     listaJurados.push_back(Jurado("Fabian Ledezma", "Fabian@gmail.com", 004, 34345, "Jurado", 1));
     listaJurados.push_back(Jurado("Juan Orozco", "juan@gmail.com", 005, 465634, "Jurado", 1));
-    listaPersonas.push_back(Persona("NA", "NA", 000, 000, "Codirector"));
+    listaPersonas.push_back(Persona("NA", "NA", 000, 000, "Codirector")); // Se crea un codirector vacío para cuando el acta no tenga codirector
 }
 
+// Función que busca y devuelve una persona cuando la encuentra
 Persona Maestria::buscarPersona(int id){
     for(list<Persona>::iterator it = listaPersonas.begin(); it != listaPersonas.end(); it++){
         if(it->getId() == id){
@@ -19,10 +22,11 @@ Persona Maestria::buscarPersona(int id){
         }
     }
     Persona persona;
-    persona.setId(0);
+    persona.setId(0); // Cuando la persona no es encontrada, se devuelve una variable de tipo persona con el id en 0
     return persona;
 }
 
+// Función que busca y devuelve un jurado cuando la encuentra
 Jurado Maestria::buscarJurado(int id){
     for(list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++){
         if(it->getId() == id){
@@ -30,10 +34,11 @@ Jurado Maestria::buscarJurado(int id){
         }
     }
     Jurado jurado;
-    jurado.setId(0);
+    jurado.setId(0); // Cuando el jurado no es encontrado, se devuelve una variable de tipo Jurado con el id en 0
     return jurado;
 }
 
+// Función que crea una persona
 void Maestria::crearPersona(){
     int id, celular;
     string nombre, email, rol;
@@ -55,6 +60,7 @@ void Maestria::crearPersona(){
     cout << "Ingrese el rol de la persona " << endl;
     cin >> rol;
 
+    // Se envían los datos al constructor y se agrega a la lista.
     listaPersonas.push_back(Persona(nombre, email, id, celular, rol));
 }
 
@@ -81,6 +87,7 @@ void Maestria::crearJurado(){
     listaJurados.push_back(Jurado(nombre, email, id, celular, rol, tipoJurado));
 }
 
+// Función que crea un acta
 void Maestria::crearActa(){
     int idActa, idPersona, opc, idJuradoUno, idJuradoDos, idDirector, idCodirector, tipoTrabajo;
     string fecha, nombreDelTrabajo;
@@ -105,10 +112,12 @@ void Maestria::crearActa(){
     cin >> idPersona;
 
     autor = buscarPersona(idPersona);
+    // Se verifica si el id de la persona es 0, en caso de serlo quiere decir que la persona no existe
+    // y se procede a crearla.
     if(!autor.verificarExistenciaPersona()){
         cout << "No se encontro la persona. Se creara una." << endl;
         crearPersona();
-        autor = *listaPersonas.rbegin();
+        autor = *listaPersonas.rbegin(); // Rbegin devuelve un apuntador al último elemento de la lista
         autor.mostrarPersona();
     }
 
@@ -157,12 +166,15 @@ void Maestria::crearActa(){
         }
     }
     else{
+        // En caso de que no exista codirector se usa el codirector NA creado al inicio del programa
         idCodirector = 0;
         codirector = buscarPersona(idCodirector);
     }
+    // Se crea el objeto con el constructor y se agrega en la lista de las actas
     this->listaActas.push_back(Acta(idActa, fecha, autor, nombreDelTrabajo, juradoUno, juradoDos, director, codirector, tipoTrabajo));
 }
 
+// Función que devuelve 0 cuando encuentra el acta y 1 cuando no la encuentra
 int Maestria::verificarExistenciaActa(int idActa){
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
         if(it->getNumero() == idActa){
@@ -183,7 +195,7 @@ void Maestria::crearCriterios() {
         cout << "El acta no existe" << endl;
         return;
     }
-
+    // Se llama al método llenar criterios cuando encuentra el acta
     it = obtenerActa(idActa);
     it->llenarCriterios();
 }
@@ -205,7 +217,7 @@ void Maestria::diligenciarCalificaciones(){
         cout << "No se han creado los criterios de este acta" << endl;
         return;
     }
-    it->ingresarCaLificaciones();
+    it->ingresarCaLificaciones(); // Se llama el método ingresar calificaciones cuando encuentra el acta
 }
 
 void Maestria::diligenciarComentarios(){
@@ -224,7 +236,7 @@ void Maestria::diligenciarComentarios(){
     }
 
     it = obtenerActa(idActa);
-    it->ingresarComentarios();
+    it->ingresarComentarios(); // Se llama el método ingresar comentarios cuando encuentra el acta
 }
 
 void Maestria::actualizarActa(int id){
@@ -242,7 +254,7 @@ Acta Maestria::buscarActa(int idActa){
 list<Acta>::iterator Maestria::obtenerActa(int idActa){
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
         if(it->getNumero() == idActa){
-            return it;
+            return it; // Función que devuelve un apuntador al acta cuando la encuentra
         }
     }
 }
@@ -261,7 +273,7 @@ void Maestria::mostrarTodosLosCriterios(){
     }
 
     it = obtenerActa(idActa);
-    it->mostrarDetalleCriterio();
+    it->mostrarDetalleCriterio(); // Se llaman al método de acta que se llama mostrarDetalleCriterio
 
 }
 void Maestria::obtenerNotaFinalDeUnActa(){
@@ -277,7 +289,7 @@ void Maestria::obtenerNotaFinalDeUnActa(){
     }
 
     it = obtenerActa(idActa);
-    it->sacarNotaFinalActa();
+    it->sacarNotaFinalActa(); // Se llama al método de acta que se llama sacar nota final
 }
 
 void Maestria::cerrarUnActa(){
@@ -293,12 +305,12 @@ void Maestria::cerrarUnActa(){
     }
 
     it = obtenerActa(idActa);
-    it->cerrarActa();
+    it->cerrarActa(); // Se llama al método de acta que se llama cerrar acta
 }
 
 void Maestria::mostrarTodasLasActas(){
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        it->mostrarDatos();
+        it->mostrarDatos(); // Se hace un ciclo recorriendo toda la lista de actas y se imprimen todas
     }
 }
 
@@ -315,7 +327,7 @@ void Maestria::listarActasPorEstado(){
         estadoUsuario = cerrado;
     }
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getEstadoActa() == estadoUsuario)
+        if(it->getEstadoActa() == estadoUsuario) // Se buscan solo las actas que tengan el estado deseado por el usuario y se imprimen.
             it->mostrarDatos();
     }
 }
@@ -323,7 +335,7 @@ void Maestria::listarActasPorEstado(){
 void Maestria::mostrarTrabajosPorTipo(TipoDeTrabajo tipo){
     int cont = 0;
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getTipoDeTrabajo() == tipo){
+        if(it->getTipoDeTrabajo() == tipo){ // Se buscan las actas del tipo que se define por parámetro
             it->mostrarDatos();
             cont++;
         }

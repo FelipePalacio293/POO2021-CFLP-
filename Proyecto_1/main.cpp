@@ -32,6 +32,8 @@ void mostrarMenu(){
     cout << "21. Generar archivo de texto con los datos." << endl;
 }
 
+// Se crea un método menú y una variable maestría donde se llaman todas las funciones del programa
+
 void menu(){
     int opc;
     Maestria maestria;

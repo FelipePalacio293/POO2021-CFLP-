@@ -11,7 +11,7 @@ using std::getline;
 
 class Maestria{
     private:
-        list<Acta> listaActas;
+        list<Acta> listaActas; // Se definen las listas que almacenarán "todos" los datos del programa
         list<Jurado> listaJurados;
         list<Persona> listaPersonas;
     public:

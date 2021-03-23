@@ -100,7 +100,7 @@ void Acta::llenarCriterios(){
         return;
     }
     for(x = 0; x < 8; x++){
-        detalleCriterio.definirCriterio();
+        detalleCriterio.definirCriterio(); // Se llama al metodo de detalle criterio que permite llenar los criterios
         this->detallesCriterios.push_back(detalleCriterio);
     }
     this->tieneCalificaciones = 1;
