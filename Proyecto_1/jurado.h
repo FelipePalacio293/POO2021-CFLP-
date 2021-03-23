@@ -17,9 +17,9 @@ enum TipoJurado{
     externo = 2
 };
 
-class Jurado : public Persona{
+class Jurado : public Persona{ // La clase jurado toma todos los métodos y atributos de la clase persona
     private:
-        TipoJurado tipoJurado;
+        TipoJurado tipoJurado; // Tiene también sus propios atributos y métodos
     public:
         Jurado(string, string, int, int, string, int);
         Jurado();

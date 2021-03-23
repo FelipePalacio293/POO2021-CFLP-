@@ -12,12 +12,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23b02567-2750-4c35-ab0b-b839818edd34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Inteligencia artificial para las protesis deportivas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manual Técnico.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Manual Técnico.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acta.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/acta.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acta.h" beforeDir="false" afterPath="$PROJECT_DIR$/acta.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/persona.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/persona.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detalleCriterio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/detalleCriterio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jurado.h" beforeDir="false" afterPath="$PROJECT_DIR$/jurado.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maestria.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/maestria.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maestria.h" beforeDir="false" afterPath="$PROJECT_DIR$/maestria.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persona.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/persona.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$nual Técnico.docx" beforeDir="false" afterPath="$PROJECT_DIR$/~$nual Técnico.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~WRL1296.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/~WRL2891.tmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +80,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,7 +97,8 @@
       <workItem from="1616271171838" duration="12300000" />
       <workItem from="1616297287273" duration="1026000" />
       <workItem from="1616356802006" duration="2878000" />
-      <workItem from="1616439476815" duration="15679000" />
+      <workItem from="1616439476815" duration="15982000" />
+      <workItem from="1616512491894" duration="1864000" />
     </task>
     <servers />
   </component>

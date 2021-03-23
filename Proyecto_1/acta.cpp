@@ -4,6 +4,7 @@ Acta::Acta(){
 
 }
 
+// Constructor para la creación de un acta
 Acta::Acta(int numero, string fecha, Persona autor, string nombreTrabajo, Jurado juradoUno, Jurado juradoDos, Persona director, Persona codirector, int tipoDeTrabajo){
     this->numero = numero;
     this->fecha = fecha;
@@ -88,6 +89,8 @@ void Acta::ingresarCaLificaciones(){
     this->puedeCalificarse = 1;
 }
 
+// Función que se encarga de crear los criterios del acta, haciendo uso de una variable detalle criterio
+// de forma temporal.
 void Acta::llenarCriterios(){
     int x;
     DetalleCriterio detalleCriterio;
@@ -107,7 +110,6 @@ void Acta::llenarCriterios(){
 }
 
 void Acta::mostrarDetalleCriterio(){
-    DetalleCriterio detalleTemp;
     for(list<DetalleCriterio>::iterator it = detallesCriterios.begin(); it != detallesCriterios.end(); it++){
         it->mostrarCriterio();
     }
@@ -120,6 +122,7 @@ void Acta::definirEstadoCalificacion(){
         this->estadoCalificacion = aprobado;
 }
 
+// Se define la nota final del acta, sacando también así, una nota promedio y una nota ponderada.
 void Acta::sacarNotaFinalActa(){
     if(this->estadoActa == cerrado){
         cout << "Este acta ya se encuentra cerrada." << endl;
@@ -178,11 +181,13 @@ EstadoCalificacion Acta::getEstadoCalificacion(){
     return this->estadoCalificacion;
 }
 
+// Función que se encarga de generar un archivo de texto con los datos del acta que ha solicitado
+// el usuario
 void Acta::guardarInformacionArchivoTexto(){
     ofstream file;
     string nombreArchivo = this->nombreTrabajo;
     nombreArchivo += ".txt";
-    file.open(nombreArchivo.c_str(), ios::out);
+    file.open(nombreArchivo.c_str(), ios::out);  // EL nombre del archivo es el mismo nombre del proyecto
     file << "  ---  Acta de evaluacion de trabajo de grado  ---  " << endl;
     file << "Trabajo de grado denominado: " << this->nombreTrabajo << endl;
     file << "Autor: " << this->autor.getNombre() << " ID:  " << this->autor.getId() << endl;
@@ -205,7 +210,7 @@ void Acta::guardarInformacionArchivoTexto(){
         cont++;
     }
 
-    file << "Como  resultado  de  estas  calificaciones  parciales\m  y  sus  ponderaciones,  la  calificación  del Trabajo  deGrado es: "<< this->notaFinal << endl;
+    file << "Como  resultado  de  estas  calificaciones  parciales\n  y  sus  ponderaciones,  la  calificación  del Trabajo  deGrado es: "<< this->notaFinal << endl;
 
     file.close();
 }

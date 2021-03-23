@@ -3,6 +3,7 @@
 Persona::Persona(){
 }
 
+// Constructor de la clase persona
 Persona::Persona(string nombre, string email, int id, int celular, string rol){
     this->nombre = nombre;
     this->email = email;

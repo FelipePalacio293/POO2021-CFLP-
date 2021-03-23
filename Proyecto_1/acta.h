@@ -69,4 +69,5 @@ class Acta{
         int getPuedeCalificarse();
         void setComentariosAdicionales(string);
 };
+
 #endif

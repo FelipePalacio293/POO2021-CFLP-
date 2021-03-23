@@ -28,6 +28,8 @@ void DetalleCriterio::setNotaJuradoDos(float nota){
     this->notaJuradoDos = nota;
 }
 
+// Método que define los atributos de la variable criterio dentro de la clase detalleCriterio,
+// haciendo uso de los sets.
 void DetalleCriterio::definirCriterio(){
     string descripcion;
     float ponderado;

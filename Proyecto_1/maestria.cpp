@@ -191,7 +191,7 @@ void Maestria::crearCriterios() {
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
 
-    if(verificarExistenciaActa(idActa)){
+    if(verificarExistenciaActa(idActa)){ // Siempre se verifica que el acta exista, para que el programa no de errores.
         cout << "El acta no existe" << endl;
         return;
     }
@@ -370,7 +370,7 @@ void Maestria::mostrarTodosLosJurados(){
 
 void Maestria::mostrarActasPorEstadoCalificacion(){
     cout << "Se imprimiran las actas pendientes y rechazadas" << endl;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){ // Se buscan todas las actas con estado pendiente o rechazado (esto se maneja con un enum dentro de la clase acta)
         if(it->getEstadoCalificacion() == rechazado || it->getEstadoCalificacion() == pendiente){
             it->mostrarDatos();
         }
@@ -398,7 +398,7 @@ void Maestria::eliminarActa(){
     }
 
     it = obtenerActa(idActa);
-    listaActas.erase(it);
+    listaActas.erase(it); // Se utiliza el método erase de la las lists de C++ para borrar el elemento.
 
 }
 
