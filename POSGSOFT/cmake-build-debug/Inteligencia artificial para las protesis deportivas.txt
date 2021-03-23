@@ -1,0 +1,102 @@
+  ---  Acta de evaluacion de trabajo de grado  ---  
+Trabajo de grado denominado: Inteligencia artificial para las protesis deportivas
+Autor: Santiago Grisales ID:  1
+Periodo: 2/09/2020
+Enfasis en: Sistemas y computacion
+
+Modalidad: Aplicado
+
+Jurado 1: Fabian Ledezma
+
+Jurado 2: Juan Orozco
+
+
+
+En atenci贸n al desarrollo de este Trabajo de Grado y al documento y sustentaci贸n que present贸 el(la) autor(a),
+ los  Jurados  damos  las  siguientes  calificaciones  parciales  y  observaciones  (los  criterios  a  evaluar
+  y  sus ponderaciones se estipulan en el art铆culo 7.1 de las Directrices para Trabajo
+ de Grado de Maestr铆a)
+
+
+
+1. Creatividad:
+
+
+Calificacion parcial: 3.5                    Ponderacion: 7.5%
+
+
+
+
+
+---------------------------------------------------------------------
+2. Funcionalidad:
+
+
+Calificacion parcial: 4.5                    Ponderacion: 7.5%
+
+
+
+
+
+---------------------------------------------------------------------
+3. Aplicabilidad:
+
+
+Calificacion parcial: 2.5                    Ponderacion: 7.5%
+
+
+
+
+
+---------------------------------------------------------------------
+4. Posibilidad de integraci:
+
+
+Calificacion parcial: 3.5                    Ponderacion: 7.5%
+
+
+
+
+
+---------------------------------------------------------------------
+5. Integracion en el mundo real:
+
+
+Calificacion parcial: 4                    Ponderacion: 10%
+
+
+
+
+
+---------------------------------------------------------------------
+6. Logica:
+
+
+Calificacion parcial: 3                    Ponderacion: 10%
+
+
+
+
+
+---------------------------------------------------------------------
+7. Importancia actual:
+
+
+Calificacion parcial: 3                    Ponderacion: 20%
+
+
+
+
+
+---------------------------------------------------------------------
+8. Importancia futura:
+
+
+Calificacion parcial: 5                    Ponderacion: 20%
+
+
+
+
+
+---------------------------------------------------------------------
+Como  resultado  de  estas  calificaciones  parcialesm  y  sus  ponderaciones,  la  calificaci贸n  del Trabajo  deGrado es: 29
