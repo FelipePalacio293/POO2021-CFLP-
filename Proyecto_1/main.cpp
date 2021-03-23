@@ -43,66 +43,108 @@ void menu(){
         switch(opc){
             case 1:
                 maestria.crearActa();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 2:
                 maestria.crearPersona();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 3:
                 maestria.crearJurado();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 4:
                 maestria.crearCriterios();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 5:
                 maestria.diligenciarCalificaciones();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 6:
                 maestria.mostrarTodosLosCriterios();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 7:
                 maestria.diligenciarComentarios();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 8:
                 maestria.obtenerNotaFinalDeUnActa();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 9:
                 maestria.cerrarUnActa();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 10:
                 maestria.mostrarTodasLasActas();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 11:
                 maestria.listarActasPorEstado();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 12:
                 maestria.mostrarTrabajosPorTipo(aplicado);
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 13:
                 maestria.mostrarTrabajosPorTipo(investigacion);
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 14:
                 maestria.mostrarTrabajosPorProfesor();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 15:
                 maestria.mostrarTrabajoPorJurado();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 16:
                 maestria.mostrarTodosLosJurados();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 17:
                 maestria.mostrarActasPorEstadoCalificacion();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 18:
                 maestria.consultarJuradosPorTipo(interno);
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 19:
                 maestria.consultarJuradosPorTipo(externo);
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 20:
                 maestria.eliminarActa();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             case 21:
                 maestria.generarArchivoDeTexto();
+                cout << "==========================" << endl;
+                cout << "Instruccion finalizada" << endl;
                 break;
             default:
                 cout << "Opcion invalida" << endl;

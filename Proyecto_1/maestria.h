@@ -41,7 +41,9 @@ class Maestria{
         void consultarJuradosPorTipo(TipoJurado);
         void eliminarActa();
         void generarArchivoDeTexto();
-        list<Acta>::iterator obtenerActa();
+        list<Acta>::iterator obtenerActa(int);
+        int verificarExistenciaActa(int);
+        void verificarComentariosAdicionales();
 };
 
 #endif

@@ -15,7 +15,9 @@
       <change beforePath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acta.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/acta.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acta.h" beforeDir="false" afterPath="$PROJECT_DIR$/acta.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detalleCriterio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/detalleCriterio.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maestria.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/maestria.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maestria.h" beforeDir="false" afterPath="$PROJECT_DIR$/maestria.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -66,6 +68,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,7 +89,8 @@
       <workItem from="1616225139246" duration="1613000" />
       <workItem from="1616271171838" duration="12300000" />
       <workItem from="1616297287273" duration="1026000" />
-      <workItem from="1616356802006" duration="1312000" />
+      <workItem from="1616356802006" duration="2878000" />
+      <workItem from="1616439476815" duration="9200000" />
     </task>
     <servers />
   </component>

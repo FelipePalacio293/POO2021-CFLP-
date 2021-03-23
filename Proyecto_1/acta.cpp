@@ -22,6 +22,7 @@ Acta::Acta(int numero, string fecha, Persona autor, string nombreTrabajo, Jurado
         this->tipoTrabajo = investigacion;
     this->puedeCalificarse = 0;
     this->notaFinal = 0;
+    this->tieneCalificaciones = 0;
 }
 
 void Acta::calificarActa(){
@@ -102,6 +103,7 @@ void Acta::llenarCriterios(){
         detalleCriterio.definirCriterio();
         this->detallesCriterios.push_back(detalleCriterio);
     }
+    this->tieneCalificaciones = 1;
 }
 
 void Acta::mostrarDetalleCriterio(){
@@ -203,6 +205,15 @@ void Acta::guardarInformacionArchivoTexto(){
         cont++;
     }
 
-    file.close();
+    file << "Como  resultado  de  estas  calificaciones  parciales\m  y  sus  ponderaciones,  la  calificación  del Trabajo  deGrado es: "<< this->notaFinal << endl;
 
+    file.close();
+}
+
+int Acta::getPuedeCalificarse() {
+    return this->tieneCalificaciones;
+}
+
+void Acta::setComentariosAdicionales(string comentariosAdicionales){
+    this->comentariosAdicionales = comentariosAdicionales;
 }

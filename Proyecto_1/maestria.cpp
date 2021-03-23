@@ -9,6 +9,7 @@ void Maestria::setDummyData(){
     listaPersonas.push_back(Persona("Luisa Rincon", "lufe@gmail.com", 003, 34345, "Codirector"));
     listaJurados.push_back(Jurado("Fabian Ledezma", "Fabian@gmail.com", 004, 34345, "Jurado", 1));
     listaJurados.push_back(Jurado("Juan Orozco", "juan@gmail.com", 005, 465634, "Jurado", 1));
+    listaPersonas.push_back(Persona("NA", "NA", 000, 000, "Codirector"));
 }
 
 Persona Maestria::buscarPersona(int id){
@@ -155,34 +156,56 @@ void Maestria::crearActa(){
             codirector = *listaPersonas.rbegin();
         }
     }
-
+    else{
+        idCodirector = 0;
+        codirector = buscarPersona(idCodirector);
+    }
     this->listaActas.push_back(Acta(idActa, fecha, autor, nombreDelTrabajo, juradoUno, juradoDos, director, codirector, tipoTrabajo));
+}
+
+int Maestria::verificarExistenciaActa(int idActa){
+    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
+        if(it->getNumero() == idActa){
+            return 0;
+        }
+    }
+    return 1;
 }
 
 void Maestria::crearCriterios() {
     int x, idActa;
+    list<Acta>::iterator it;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->llenarCriterios();
-            break;
-        }
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    it->llenarCriterios();
 }
 
 void Maestria::diligenciarCalificaciones(){
     int idActa;
+    list<Acta>::iterator it;
+
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
-    cout << "He llegado hasta aqui 1" << endl;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->ingresarCaLificaciones();
-            break;
-        }
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "El acta no existe" << endl;
+        return;
     }
+    it = obtenerActa(idActa);
+
+    if(!it->getPuedeCalificarse()){
+        cout << "No se han creado los criterios de este acta" << endl;
+        return;
+    }
+    it->ingresarCaLificaciones();
 }
 
 void Maestria::diligenciarComentarios(){
@@ -190,16 +213,18 @@ void Maestria::diligenciarComentarios(){
     string comentarios;
     list<DetalleCriterio> detalles;
     Jurado juradoUno, juradoDos;
+    list<Acta>::iterator it;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
 
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->ingresarComentarios();
-            break;
-        }
+    if(verificarExistenciaActa(idActa)){
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    it->ingresarComentarios();
 }
 
 void Maestria::actualizarActa(int id){
@@ -214,11 +239,7 @@ Acta Maestria::buscarActa(int idActa){
     }
 }
 
-list<Acta>::iterator Maestria::obtenerActa(){
-    int idActa;
-
-    cout << "Ingrese el ID del acta:" << endl;
-    cin >> idActa;
+list<Acta>::iterator Maestria::obtenerActa(int idActa){
     for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
         if(it->getNumero() == idActa){
             return it;
@@ -228,40 +249,51 @@ list<Acta>::iterator Maestria::obtenerActa(){
 
 void Maestria::mostrarTodosLosCriterios(){
     int idActa;
+    list<Acta>::iterator it;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->mostrarDetalleCriterio();
-            break;
-        }
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "==========================" << endl;
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    it->mostrarDetalleCriterio();
+
 }
 void Maestria::obtenerNotaFinalDeUnActa(){
     int idActa;
-
+    list<Acta>::iterator it;
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
 
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->sacarNotaFinalActa();
-            break;
-        }
+    if(verificarExistenciaActa(idActa)){
+        cout << "==========================" << endl;
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    it->sacarNotaFinalActa();
 }
 
 void Maestria::cerrarUnActa(){
     int idActa;
-
+    list<Acta>::iterator it;
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->cerrarActa();
-        }
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "==========================" << endl;
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    it->cerrarActa();
 }
 
 void Maestria::mostrarTodasLasActas(){
@@ -342,26 +374,56 @@ void Maestria::consultarJuradosPorTipo(TipoJurado tipo){
 
 void Maestria::eliminarActa(){
     int idActa;
+    list<Acta>::iterator it;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            listaActas.erase(it);
-            break;
-        }
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "==========================" << endl;
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    listaActas.erase(it);
+
 }
 
 void Maestria::generarArchivoDeTexto(){
     int idActa;
+    list<Acta>::iterator it;
 
     cout << "Ingrese el ID del acta:" << endl;
     cin >> idActa;
-    for(list<Acta>::iterator it = listaActas.begin(); it != listaActas.end(); it++){
-        if(it->getNumero() == idActa){
-            it->guardarInformacionArchivoTexto();
-            break;
-        }
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "==========================" << endl;
+        cout << "El acta no existe" << endl;
+        return;
     }
+
+    it = obtenerActa(idActa);
+    it->guardarInformacionArchivoTexto();
+}
+
+void Maestria::verificarComentariosAdicionales() {
+    int idActa;
+    list<Acta>::iterator it;
+    string comentarios;
+
+    cout << "Ingrese el ID del acta:" << endl;
+    cin >> idActa;
+
+    if(verificarExistenciaActa(idActa)){
+        cout << "==========================" << endl;
+        cout << "El acta no existe" << endl;
+        return;
+    }
+
+    cout << "Ingrese los comentarios adicionales: " << endl;
+    getline(cin, comentarios);
+
+    it = obtenerActa(idActa);
+    it->setComentariosAdicionales(comentarios);
 }
