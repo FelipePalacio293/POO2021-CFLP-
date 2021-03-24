@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Proyecto_1" targetName="Proyecto_1" />
+      <config projectName="POSGSOFT" targetName="POSGSOFT" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,8 +11,118 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b02567-2750-4c35-ab0b-b839818edd34" name="Default Changelist" comment="">
+    <list default="true" id="acd8597e-1f6a-4172-9f8c-c6353a05ef5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/POSGSOFT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../LaFarraProfe/Tienda/tienda.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/criterio.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/jurado.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_1.dir/persona.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_1.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/.idea/Proyecto_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/Informe de autoevaluación.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/Manual Técnico.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/MontanaRusa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/acta.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/acta.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/3.17.5/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/criterio.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/jurado.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/persona.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/Inteligencia artificial para las protesis deportivas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/Perdoname mi vida.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/Proyecto_1.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/Proyecto_1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/criterio.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/criterio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/detalleCriterio.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/detalleCriterio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/jurado.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/jurado.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/maestria.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/maestria.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/persona.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/persona.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/prueba.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/prueba.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/~$nual Técnico.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proyecto_1/~WRL2891.tmp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +136,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="1pwoQFfgBlcMPlySJu4pxoMqjQl" />
+  <component name="ProjectId" id="1qAScAxP6fDWYtYSMWBGgnQd0eh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,33 +154,33 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration name="Proyecto_1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_1" TARGET_NAME="Proyecto_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_1" RUN_TARGET_NAME="Proyecto_1">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="POSGSOFT" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="POSGSOFT" TARGET_NAME="POSGSOFT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="POSGSOFT" RUN_TARGET_NAME="POSGSOFT">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="23b02567-2750-4c35-ab0b-b839818edd34" name="Default Changelist" comment="" />
-      <created>1616103496089</created>
+      <changelist id="acd8597e-1f6a-4172-9f8c-c6353a05ef5b" name="Default Changelist" comment="" />
+      <created>1616520980105</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1616103496089</updated>
-      <workItem from="1616103497675" duration="5972000" />
-      <workItem from="1616188935772" duration="21271000" />
-      <workItem from="1616215466769" duration="29000" />
-      <workItem from="1616216722537" duration="6923000" />
-      <workItem from="1616225139246" duration="1613000" />
-      <workItem from="1616271171838" duration="12300000" />
-      <workItem from="1616297287273" duration="1026000" />
-      <workItem from="1616356802006" duration="2878000" />
-      <workItem from="1616439476815" duration="15982000" />
-      <workItem from="1616512491894" duration="1985000" />
+      <updated>1616520980105</updated>
+      <workItem from="1616520982011" duration="758000" />
     </task>
     <servers />
   </component>
@@ -95,6 +197,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

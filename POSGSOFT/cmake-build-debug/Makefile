@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pc1\Desktop\TareaPOO\Proyecto_1
+CMAKE_SOURCE_DIR = C:\Users\pc1\Desktop\TareaPOO\POSGSOFT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Proyecto_1
+# Target rules for targets named POSGSOFT
 
 # Build rule for target.
-Proyecto_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Proyecto_1
-.PHONY : Proyecto_1
+POSGSOFT: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 POSGSOFT
+.PHONY : POSGSOFT
 
 # fast build rule for target.
-Proyecto_1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/build
-.PHONY : Proyecto_1/fast
+POSGSOFT/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/build
+.PHONY : POSGSOFT/fast
 
 acta.obj: acta.cpp.obj
 
@@ -148,7 +148,7 @@ acta.obj: acta.cpp.obj
 
 # target to build an object file
 acta.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/acta.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/acta.cpp.obj
 .PHONY : acta.cpp.obj
 
 acta.i: acta.cpp.i
@@ -157,7 +157,7 @@ acta.i: acta.cpp.i
 
 # target to preprocess a source file
 acta.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/acta.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/acta.cpp.i
 .PHONY : acta.cpp.i
 
 acta.s: acta.cpp.s
@@ -166,7 +166,7 @@ acta.s: acta.cpp.s
 
 # target to generate assembly for a file
 acta.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/acta.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/acta.cpp.s
 .PHONY : acta.cpp.s
 
 criterio.obj: criterio.cpp.obj
@@ -175,7 +175,7 @@ criterio.obj: criterio.cpp.obj
 
 # target to build an object file
 criterio.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/criterio.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/criterio.cpp.obj
 .PHONY : criterio.cpp.obj
 
 criterio.i: criterio.cpp.i
@@ -184,7 +184,7 @@ criterio.i: criterio.cpp.i
 
 # target to preprocess a source file
 criterio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/criterio.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/criterio.cpp.i
 .PHONY : criterio.cpp.i
 
 criterio.s: criterio.cpp.s
@@ -193,7 +193,7 @@ criterio.s: criterio.cpp.s
 
 # target to generate assembly for a file
 criterio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/criterio.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/criterio.cpp.s
 .PHONY : criterio.cpp.s
 
 detalleCriterio.obj: detalleCriterio.cpp.obj
@@ -202,7 +202,7 @@ detalleCriterio.obj: detalleCriterio.cpp.obj
 
 # target to build an object file
 detalleCriterio.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/detalleCriterio.cpp.obj
 .PHONY : detalleCriterio.cpp.obj
 
 detalleCriterio.i: detalleCriterio.cpp.i
@@ -211,7 +211,7 @@ detalleCriterio.i: detalleCriterio.cpp.i
 
 # target to preprocess a source file
 detalleCriterio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/detalleCriterio.cpp.i
 .PHONY : detalleCriterio.cpp.i
 
 detalleCriterio.s: detalleCriterio.cpp.s
@@ -220,7 +220,7 @@ detalleCriterio.s: detalleCriterio.cpp.s
 
 # target to generate assembly for a file
 detalleCriterio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/detalleCriterio.cpp.s
 .PHONY : detalleCriterio.cpp.s
 
 jurado.obj: jurado.cpp.obj
@@ -229,7 +229,7 @@ jurado.obj: jurado.cpp.obj
 
 # target to build an object file
 jurado.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/jurado.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/jurado.cpp.obj
 .PHONY : jurado.cpp.obj
 
 jurado.i: jurado.cpp.i
@@ -238,7 +238,7 @@ jurado.i: jurado.cpp.i
 
 # target to preprocess a source file
 jurado.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/jurado.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/jurado.cpp.i
 .PHONY : jurado.cpp.i
 
 jurado.s: jurado.cpp.s
@@ -247,7 +247,7 @@ jurado.s: jurado.cpp.s
 
 # target to generate assembly for a file
 jurado.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/jurado.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/jurado.cpp.s
 .PHONY : jurado.cpp.s
 
 maestria.obj: maestria.cpp.obj
@@ -256,7 +256,7 @@ maestria.obj: maestria.cpp.obj
 
 # target to build an object file
 maestria.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/maestria.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/maestria.cpp.obj
 .PHONY : maestria.cpp.obj
 
 maestria.i: maestria.cpp.i
@@ -265,7 +265,7 @@ maestria.i: maestria.cpp.i
 
 # target to preprocess a source file
 maestria.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/maestria.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/maestria.cpp.i
 .PHONY : maestria.cpp.i
 
 maestria.s: maestria.cpp.s
@@ -274,7 +274,7 @@ maestria.s: maestria.cpp.s
 
 # target to generate assembly for a file
 maestria.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/maestria.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/maestria.cpp.s
 .PHONY : maestria.cpp.s
 
 main.obj: main.cpp.obj
@@ -283,7 +283,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -292,7 +292,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -301,7 +301,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 persona.obj: persona.cpp.obj
@@ -310,7 +310,7 @@ persona.obj: persona.cpp.obj
 
 # target to build an object file
 persona.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/persona.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/persona.cpp.obj
 .PHONY : persona.cpp.obj
 
 persona.i: persona.cpp.i
@@ -319,7 +319,7 @@ persona.i: persona.cpp.i
 
 # target to preprocess a source file
 persona.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/persona.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/persona.cpp.i
 .PHONY : persona.cpp.i
 
 persona.s: persona.cpp.s
@@ -328,7 +328,7 @@ persona.s: persona.cpp.s
 
 # target to generate assembly for a file
 persona.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proyecto_1.dir\build.make CMakeFiles/Proyecto_1.dir/persona.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POSGSOFT.dir\build.make CMakeFiles/POSGSOFT.dir/persona.cpp.s
 .PHONY : persona.cpp.s
 
 # Help Target
@@ -339,7 +339,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Proyecto_1
+	@echo ... POSGSOFT
 	@echo ... acta.obj
 	@echo ... acta.i
 	@echo ... acta.s

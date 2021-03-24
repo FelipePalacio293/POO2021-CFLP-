@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pc1\Desktop\TareaPOO\Proyecto_1
+CMAKE_SOURCE_DIR = C:\Users\pc1\Desktop\TareaPOO\POSGSOFT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Proyecto_1.dir/depend.make
@@ -78,94 +78,94 @@ include CMakeFiles/Proyecto_1.dir/flags.make
 
 CMakeFiles/Proyecto_1.dir/main.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proyecto_1.dir/main.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\main.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proyecto_1.dir/main.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\main.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\main.cpp
 
 CMakeFiles/Proyecto_1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/main.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\main.cpp > CMakeFiles\Proyecto_1.dir\main.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\main.cpp > CMakeFiles\Proyecto_1.dir\main.cpp.i
 
 CMakeFiles/Proyecto_1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/main.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\main.cpp -o CMakeFiles\Proyecto_1.dir\main.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\main.cpp -o CMakeFiles\Proyecto_1.dir\main.cpp.s
 
 CMakeFiles/Proyecto_1.dir/criterio.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/criterio.cpp.obj: ../criterio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Proyecto_1.dir/criterio.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\criterio.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\criterio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Proyecto_1.dir/criterio.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\criterio.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\criterio.cpp
 
 CMakeFiles/Proyecto_1.dir/criterio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/criterio.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\criterio.cpp > CMakeFiles\Proyecto_1.dir\criterio.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\criterio.cpp > CMakeFiles\Proyecto_1.dir\criterio.cpp.i
 
 CMakeFiles/Proyecto_1.dir/criterio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/criterio.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\criterio.cpp -o CMakeFiles\Proyecto_1.dir\criterio.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\criterio.cpp -o CMakeFiles\Proyecto_1.dir\criterio.cpp.s
 
 CMakeFiles/Proyecto_1.dir/acta.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/acta.cpp.obj: ../acta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Proyecto_1.dir/acta.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\acta.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\acta.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Proyecto_1.dir/acta.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\acta.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\acta.cpp
 
 CMakeFiles/Proyecto_1.dir/acta.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/acta.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\acta.cpp > CMakeFiles\Proyecto_1.dir\acta.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\acta.cpp > CMakeFiles\Proyecto_1.dir\acta.cpp.i
 
 CMakeFiles/Proyecto_1.dir/acta.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/acta.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\acta.cpp -o CMakeFiles\Proyecto_1.dir\acta.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\acta.cpp -o CMakeFiles\Proyecto_1.dir\acta.cpp.s
 
 CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj: ../detalleCriterio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\detalleCriterio.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\detalleCriterio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\detalleCriterio.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\detalleCriterio.cpp
 
 CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\detalleCriterio.cpp > CMakeFiles\Proyecto_1.dir\detalleCriterio.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\detalleCriterio.cpp > CMakeFiles\Proyecto_1.dir\detalleCriterio.cpp.i
 
 CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\detalleCriterio.cpp -o CMakeFiles\Proyecto_1.dir\detalleCriterio.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\detalleCriterio.cpp -o CMakeFiles\Proyecto_1.dir\detalleCriterio.cpp.s
 
 CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/jurado.cpp.obj: ../jurado.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Proyecto_1.dir/jurado.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\jurado.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\jurado.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Proyecto_1.dir/jurado.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\jurado.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\jurado.cpp
 
 CMakeFiles/Proyecto_1.dir/jurado.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/jurado.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\jurado.cpp > CMakeFiles\Proyecto_1.dir\jurado.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\jurado.cpp > CMakeFiles\Proyecto_1.dir\jurado.cpp.i
 
 CMakeFiles/Proyecto_1.dir/jurado.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/jurado.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\jurado.cpp -o CMakeFiles\Proyecto_1.dir\jurado.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\jurado.cpp -o CMakeFiles\Proyecto_1.dir\jurado.cpp.s
 
 CMakeFiles/Proyecto_1.dir/maestria.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/maestria.cpp.obj: ../maestria.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Proyecto_1.dir/maestria.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\maestria.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\maestria.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Proyecto_1.dir/maestria.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\maestria.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\maestria.cpp
 
 CMakeFiles/Proyecto_1.dir/maestria.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/maestria.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\maestria.cpp > CMakeFiles\Proyecto_1.dir\maestria.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\maestria.cpp > CMakeFiles\Proyecto_1.dir\maestria.cpp.i
 
 CMakeFiles/Proyecto_1.dir/maestria.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/maestria.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\maestria.cpp -o CMakeFiles\Proyecto_1.dir\maestria.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\maestria.cpp -o CMakeFiles\Proyecto_1.dir\maestria.cpp.s
 
 CMakeFiles/Proyecto_1.dir/persona.cpp.obj: CMakeFiles/Proyecto_1.dir/flags.make
 CMakeFiles/Proyecto_1.dir/persona.cpp.obj: ../persona.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Proyecto_1.dir/persona.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\persona.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\persona.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Proyecto_1.dir/persona.cpp.obj"
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Proyecto_1.dir\persona.cpp.obj -c C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\persona.cpp
 
 CMakeFiles/Proyecto_1.dir/persona.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_1.dir/persona.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\persona.cpp > CMakeFiles\Proyecto_1.dir\persona.cpp.i
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\persona.cpp > CMakeFiles\Proyecto_1.dir\persona.cpp.i
 
 CMakeFiles/Proyecto_1.dir/persona.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_1.dir/persona.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\persona.cpp -o CMakeFiles\Proyecto_1.dir\persona.cpp.s
+	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\persona.cpp -o CMakeFiles\Proyecto_1.dir\persona.cpp.s
 
 # Object files for target Proyecto_1
 Proyecto_1_OBJECTS = \
@@ -191,7 +191,7 @@ Proyecto_1.exe: CMakeFiles/Proyecto_1.dir/build.make
 Proyecto_1.exe: CMakeFiles/Proyecto_1.dir/linklibs.rsp
 Proyecto_1.exe: CMakeFiles/Proyecto_1.dir/objects1.rsp
 Proyecto_1.exe: CMakeFiles/Proyecto_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Proyecto_1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Proyecto_1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Proyecto_1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -204,6 +204,6 @@ CMakeFiles/Proyecto_1.dir/clean:
 .PHONY : CMakeFiles/Proyecto_1.dir/clean
 
 CMakeFiles/Proyecto_1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pc1\Desktop\TareaPOO\Proyecto_1 C:\Users\pc1\Desktop\TareaPOO\Proyecto_1 C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug C:\Users\pc1\Desktop\TareaPOO\Proyecto_1\cmake-build-debug\CMakeFiles\Proyecto_1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pc1\Desktop\TareaPOO\POSGSOFT C:\Users\pc1\Desktop\TareaPOO\POSGSOFT C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug C:\Users\pc1\Desktop\TareaPOO\POSGSOFT\cmake-build-debug\CMakeFiles\Proyecto_1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Proyecto_1.dir/depend
 

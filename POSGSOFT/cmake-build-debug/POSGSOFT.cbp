@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="Proyecto_1"/>
+		<Option title="POSGSOFT"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -17,8 +17,8 @@
 					<DistClean command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Proyecto_1">
-				<Option output="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Proyecto_1.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="POSGSOFT">
+				<Option output="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/POSGSOFT.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -33,14 +33,14 @@
 					<Add directory="C:/Program Files (x86)/Dev-Cpp/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_1"/>
+					<Build command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 POSGSOFT"/>
 					<CompileFile command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Proyecto_1/fast">
-				<Option output="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Proyecto_1.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="POSGSOFT/fast">
+				<Option output="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/POSGSOFT.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -55,7 +55,7 @@
 					<Add directory="C:/Program Files (x86)/Dev-Cpp/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_1/fast"/>
+					<Build command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 POSGSOFT/fast"/>
 					<CompileFile command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~2/Dev-Cpp/MinGW64/bin/mingw32-make.exe -f &quot;C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,43 +83,43 @@
 			</Target>
 		</Build>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/acta.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/acta.h">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/criterio.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/criterio.h">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/detalleCriterio.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/detalleCriterio.h">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/jurado.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/jurado.h">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/maestria.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/maestria.h">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/main.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/persona.cpp">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/persona.h">
-			<Option target="Proyecto_1"/>
+			<Option target="POSGSOFT"/>
 		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

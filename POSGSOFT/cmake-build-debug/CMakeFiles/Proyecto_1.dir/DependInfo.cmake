@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/acta.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj"
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/criterio.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/criterio.cpp.obj"
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/detalleCriterio.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj"
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/jurado.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/jurado.cpp.obj"
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/maestria.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj"
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/main.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj"
-  "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/persona.cpp" "C:/Users/pc1/Desktop/TareaPOO/Proyecto_1/cmake-build-debug/CMakeFiles/Proyecto_1.dir/persona.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/acta.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/acta.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/criterio.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/criterio.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/detalleCriterio.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/detalleCriterio.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/jurado.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/jurado.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/maestria.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/maestria.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/main.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/main.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/persona.cpp" "C:/Users/pc1/Desktop/TareaPOO/POSGSOFT/cmake-build-debug/CMakeFiles/Proyecto_1.dir/persona.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
