@@ -30,6 +30,8 @@ void mostrarMenu(){
     cout << "19. Consultar jurados internos." << endl;
     cout << "20. Eliminar un acta." << endl;
     cout << "21. Generar archivo de texto con los datos." << endl;
+    cout << "22. Salir" << endl;
+    cout << "Ingrese opcion: " << endl;
 }
 
 // Se crea un método menú y una variable maestría donde se llaman todas las funciones del programa

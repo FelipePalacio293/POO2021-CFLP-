@@ -144,6 +144,8 @@ void Tienda::vender()
 
     } while( opc != -1 );
 
+    // El id 0 se utiliza para especificar que el cliente no existe
+
     do
     {
         cout << "Digite codigo del cliente: " << endl;
