@@ -18,20 +18,25 @@ Circulo::Circulo(float radio) : Circulo()
 
 void Circulo::calcularArea()
 {
-    float area;
-    area = PI * (radio * radio);
-    cout << "El area del circulo es: " << area << endl;
+    this->area = PI * (this->radio * this->radio);
 }
 
 void Circulo::calcularPerimetro()
 {
-    float perimetro;
-    perimetro = (2 * PI) * radio;
-    cout << "El perimetro del circulo es: " << perimetro << endl;
+    this->perimetro = (2 * PI) * this->radio;
 }
 
 void Circulo::mostrarFigura()
 {
+    cout << "El radio es: " << this->radio << endl;
+    if(this->area == 0){
+        this->calcularArea();
+    }
+    if(this->perimetro == 0){
+        this->calcularPerimetro();
+    }
+    cout << "El area del circulo es " << this->area << endl;
+    cout << "El circulo del perimetro es " << this->perimetro << endl;
 }
 
 float Circulo::getRadio() const

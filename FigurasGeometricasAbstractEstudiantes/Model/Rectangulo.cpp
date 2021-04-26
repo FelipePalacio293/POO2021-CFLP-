@@ -6,7 +6,6 @@ Rectangulo::Rectangulo() {}
 
 Rectangulo::Rectangulo(float ancho, float largo)
 {
-
     this->ancho = ancho;
     this->largo = largo;
 }
@@ -15,22 +14,26 @@ Rectangulo::Rectangulo(float ancho, float largo)
 
 void Rectangulo::calcularArea()
 {
-    float area;
-    area = largo * ancho;
-    cout << "El area del rectangulo es: " << area << endl;
+    this->area = this->largo * this->ancho;
 }
 
 void Rectangulo::calcularPerimetro()
 {
-    float perimetro;
-    perimetro = (2 * largo) + (2 * ancho);
-    cout << "El perimetro del rectangulo es : " << perimetro << endl;
+    this->perimetro = (2 * this->largo) + (2 * this->ancho);
 }
 
 void Rectangulo::mostrarFigura()
 {
-    cout << "El ancho: " << ancho << " -- "
-         << "el largo: " << largo << endl;
+    cout << "La base es: " << this->ancho << endl;
+    cout << "La altura es: " << this->largo << endl;
+    if(this->area == 0){
+        calcularArea();
+    }
+    if(this->perimetro == 0){
+        calcularPerimetro();
+    }
+    cout << "El area del rectangulo es " << this->area << endl;
+    cout << "El perimetro del rectangulo es " << this->perimetro << endl;
 }
 
 float Rectangulo::getAncho()
