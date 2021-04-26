@@ -4,6 +4,7 @@
 /* Mostrar menua y validar datos de entrada */
 #include "../Controller/FigurasController.h"
 #include <iostream>
+#include <typeinfo>
 
 using std::cin;
 using std::cout;
@@ -26,5 +27,7 @@ public:
     void mostrarTodos();
     int mostrarMenu();
     void verPrincipal();
+    void mostrarPorTipoFigura(string);
+    void mostrarCuadrados();
 };
 //#define FIGURAS_CONTROLLER_H

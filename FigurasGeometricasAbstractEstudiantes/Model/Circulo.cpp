@@ -8,9 +8,8 @@ Circulo::Circulo()
 {
 }
 
-Circulo::Circulo(float radio) : Circulo()
+Circulo::Circulo(float radio)
 {
-
     this->radio = radio;
 }
 

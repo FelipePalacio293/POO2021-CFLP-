@@ -56,15 +56,35 @@ void View::pedirDatosCirculo()
     controller.agregarCirculo(radio);
 }
 
+void View::mostrarCuadrados(){
+    mostrarPorTipoFigura(typeid(Cuadrado).name());
+}
+
+void View::mostrarTriangulos(){
+    mostrarPorTipoFigura(typeid(Triangulo).name());
+}
+
+void View::mostrarCirculos()
+{
+    mostrarPorTipoFigura(typeid(Circulo).name());
+}
+
 void View::mostrarRectangulos()
 {
-    //  list<Clase_a_recorrer>:: iterator nombre_iterador = nombre_lista_de_Clase.begin(); it != nombre_lista_de_Clase.end(); i++;
+    mostrarPorTipoFigura(typeid(Rectangulo).name());
+}
+
+void View::mostrarPorTipoFigura(string figura){
+    list<FiguraGeometrica *> &pListaFiguras = controller.getListaFiguras();
     int cont = 0;
-    list<Rectangulo> &refListaRectangulo = controller.getListaRectangulo();
-    for (list<Rectangulo>::iterator it = refListaRectangulo.begin(); it != refListaRectangulo.end(); ++it)
+    for (list<FiguraGeometrica *>::iterator it = pListaFiguras.begin(); it != pListaFiguras.end(); ++it)
     {
-        cout << "Rectangulo " << ++cont << ":" << endl;
-        it->mostrarFigura();
+        FiguraGeometrica *tmp = *it;
+        if(typeid(*tmp).name() == figura){
+            cout << figura << " con polimorfismo:" << ++cont << ":" << endl;
+            tmp->mostrarFigura();
+        }
+        cout << "\n";
     }
 }
 
@@ -78,10 +98,10 @@ void View::mostrarTodos()
         FiguraGeometrica *tmp = *it;
         cout << "Figura con polimorfismo:" << ++cont << ":" << endl;
         tmp->mostrarFigura();
+        cout << "Tipo: " << typeid(*tmp).name();
         cout << "\n";
     }
 }
-
 
 int View::mostrarMenu()
 {
@@ -123,16 +143,19 @@ void View::verPrincipal()
             pedirDatosCirculo();
             break;
         case 4:
+            mostrarCirculos();
             break;
         case 5:
             pedirDatosTriangulo();
             break;     
         case 6:
+            mostrarTriangulos();
             break;   
         case 7:
             pedirDatosCuadrado();
             break;
         case 8:
+            mostrarCuadrados();
             break;
         case 9:
             mostrarTodos();
