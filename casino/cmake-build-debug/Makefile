@@ -304,6 +304,33 @@ Model/Mayor13.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Mayor13.cpp.s
 .PHONY : Model/Mayor13.cpp.s
 
+Model/Veintiuno.obj: Model/Veintiuno.cpp.obj
+
+.PHONY : Model/Veintiuno.obj
+
+# target to build an object file
+Model/Veintiuno.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Veintiuno.cpp.obj
+.PHONY : Model/Veintiuno.cpp.obj
+
+Model/Veintiuno.i: Model/Veintiuno.cpp.i
+
+.PHONY : Model/Veintiuno.i
+
+# target to preprocess a source file
+Model/Veintiuno.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Veintiuno.cpp.i
+.PHONY : Model/Veintiuno.cpp.i
+
+Model/Veintiuno.s: Model/Veintiuno.cpp.s
+
+.PHONY : Model/Veintiuno.s
+
+# target to generate assembly for a file
+Model/Veintiuno.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Veintiuno.cpp.s
+.PHONY : Model/Veintiuno.cpp.s
+
 View/View.obj: View/View.cpp.obj
 
 .PHONY : View/View.obj
@@ -385,6 +412,9 @@ help:
 	@echo ... Model/Mayor13.obj
 	@echo ... Model/Mayor13.i
 	@echo ... Model/Mayor13.s
+	@echo ... Model/Veintiuno.obj
+	@echo ... Model/Veintiuno.i
+	@echo ... Model/Veintiuno.s
 	@echo ... View/View.obj
 	@echo ... View/View.i
 	@echo ... View/View.s

@@ -36,7 +36,6 @@ Jugador *Casino::consultarJugador(long id) {
 }
 
 double Casino::convertirPesosAGonzos(double dinero) {
-
     // Cada 10 mil pesos equivalen a 100 Gonzos
     return (dinero * 100) / 10000;
 }

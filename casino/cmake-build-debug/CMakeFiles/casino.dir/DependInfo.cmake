@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/pc1/Desktop/TareaPOO/casino/Model/Juego.cpp" "C:/Users/pc1/Desktop/TareaPOO/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/Juego.cpp.obj"
   "C:/Users/pc1/Desktop/TareaPOO/casino/Model/Jugador.cpp" "C:/Users/pc1/Desktop/TareaPOO/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/Jugador.cpp.obj"
   "C:/Users/pc1/Desktop/TareaPOO/casino/Model/Mayor13.cpp" "C:/Users/pc1/Desktop/TareaPOO/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/Mayor13.cpp.obj"
+  "C:/Users/pc1/Desktop/TareaPOO/casino/Model/Veintiuno.cpp" "C:/Users/pc1/Desktop/TareaPOO/casino/cmake-build-debug/CMakeFiles/casino.dir/Model/Veintiuno.cpp.obj"
   "C:/Users/pc1/Desktop/TareaPOO/casino/View/View.cpp" "C:/Users/pc1/Desktop/TareaPOO/casino/cmake-build-debug/CMakeFiles/casino.dir/View/View.cpp.obj"
   "C:/Users/pc1/Desktop/TareaPOO/casino/main.cpp" "C:/Users/pc1/Desktop/TareaPOO/casino/cmake-build-debug/CMakeFiles/casino.dir/main.cpp.obj"
   )

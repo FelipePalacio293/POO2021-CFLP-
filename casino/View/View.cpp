@@ -7,6 +7,7 @@
 View::View(){
     controller = Controller();
 }
+
 void View::agregarJugador()
 {
     string nombreJugador;
@@ -50,23 +51,37 @@ void View::pedirUsuario(){
     }
 }
 
-void View:: jugarView(long idJugador) {
+void View::mostrarJugador(){
+    try {
+        long idJugador;
+        cout << "Ingrese el id del jugador para el que quiere mostrar \n";
+        cin >> idJugador;
+        controller.verInfoJugador(idJugador);
+
+    }catch (std::domain_error ex){
+        // Se muestra un error si el usuario no existe
+        cout << ex.what();
+    }
+}
+
+void View::jugarView(long idJugador) {
     int opcion;
     float cantGonzos;
     int idJuego;
-    do{
-        try {
-            do {
-                cout << "Cuantos gonzos desea apostar \n";
-                cin >> cantGonzos;
-            } while (cantGonzos <= 0);
 
-            // Agregue el esto de la logica para el juego 1. Juego mayor a 13, 2 juego de dos colores.
-            cout << "Por implementar \n";
-        } catch (std::domain_error ex){
-            cout << ex.what();
-        }
-    }while (opcion != 0);
+    try {
+        do {
+            cout << "Cuantos gonzos desea apostar \n";
+            cin >> cantGonzos;
+        } while (cantGonzos <= 0);
+    } catch (std::domain_error ex){
+        cout << ex.what();
+    }
+    do {
+        cout << "Que juego desea jugar:\n1. Mayor a 13\n2. Juego de dos colores\n3. Veintiuno\n";
+        cin >> idJuego;
+    } while (idJuego != 1 && idJuego != 2 && idJuego != 3);
+
     controller.jugar(idJuego, idJugador, cantGonzos);
 }
 
@@ -76,8 +91,10 @@ int View::mostrarMenu()
     cout << "Menu\n";
     cout << "1. Agregar jugador " << std::endl;
     cout << "2. Jugar" << std::endl;
-    cout << "3. Consultar jugador - pendiente " << std::endl;
-    cout << "4. Vender gonzos - pendiente " << std::endl;
+    cout << "3. Consultar jugador" << std::endl;
+    cout << "4. Vender gonzos" << std::endl;
+    cout << "5. Retirar jugador" << std::endl;
+    cout << "6. Comprar gonzos" << std::endl;
     cout << "0. Salir\n"
          << std::endl;
     cout << "Digita el numero: ";
@@ -93,21 +110,66 @@ void View::verPrincipal()
         opcion = mostrarMenu();
         switch (opcion)
         {
-            case 1: agregarJugador();
+            case 1:
+                agregarJugador();
                 break;
             case 2:
                 pedirUsuario();
+                break;
+            case 3:
+                mostrarJugador();
+                break;
+            case 4:
+                venderGonzos();
+                break;
+            case 5:
+                retirarJugador();
+                break;
+            case 6:
+                recargarGonzos();
                 break;
         }
     } while (opcion != 0);
 }
 
-void View::mostrarJugador() {
-    // LLama al metodo del controller que muestra los datos
-    cout << "Fase dos, por hacer \n";
-}
-
 void View::retirarJugador() {
-    cout << "Fase dos, por hacer \n";
+    try {
+        long idJugador;
+        cout << "Ingrese el id del jugador que desea eliminar \n";
+        cin >> idJugador;
+        controller.verInfoJugador(idJugador);
+        controller.retirarJugador(idJugador);
+
+    }catch (std::domain_error ex){
+        // Se muestra un error si el usuario no existe
+        cout << ex.what();
+    }
+    cout << "El jugador ha sido eliminado\n";
 }
 
+void View::venderGonzos() {
+    try {
+        long idJugador;
+        cout << "Ingrese el id del jugador que desea vender gonzos \n";
+        cin >> idJugador;
+        controller.venderGonzos(idJugador);
+
+    }catch (std::domain_error ex){
+        // Se muestra un error si el usuario no existe
+        cout << ex.what();
+    }
+}
+
+void View::recargarGonzos() {
+    try {
+        long idJugador;
+        cout << "Ingrese el id del jugador que desea recargar gonzos \n";
+        cin >> idJugador;
+        float potenciadorGonzos;
+        controller.recargarGonzos(idJugador);
+
+    }catch (std::domain_error ex){
+        // Se muestra un error si el usuario no existe
+        cout << ex.what();
+    }
+}

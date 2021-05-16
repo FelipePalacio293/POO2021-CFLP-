@@ -9,6 +9,7 @@ CMakeFiles/casino.dir/Controller/Controller.cpp.obj
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Juego.h
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Jugador.h
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Mayor13.h
+ C:/Users/pc1/Desktop/TareaPOO/casino/Model/Veintiuno.h
 CMakeFiles/casino.dir/Model/Casino.cpp.obj
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Casino.cpp
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Casino.h
@@ -31,6 +32,11 @@ CMakeFiles/casino.dir/Model/Mayor13.cpp.obj
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Jugador.h
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Mayor13.cpp
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Mayor13.h
+CMakeFiles/casino.dir/Model/Veintiuno.cpp.obj
+ C:/Users/pc1/Desktop/TareaPOO/casino/Model/Juego.h
+ C:/Users/pc1/Desktop/TareaPOO/casino/Model/Jugador.h
+ C:/Users/pc1/Desktop/TareaPOO/casino/Model/Veintiuno.cpp
+ C:/Users/pc1/Desktop/TareaPOO/casino/Model/Veintiuno.h
 CMakeFiles/casino.dir/View/View.cpp.obj
  C:/Users/pc1/Desktop/TareaPOO/casino/Controller/Controller.h
  C:/Users/pc1/Desktop/TareaPOO/casino/Model/Casino.h

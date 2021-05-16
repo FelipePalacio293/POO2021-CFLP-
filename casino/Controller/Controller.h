@@ -7,10 +7,11 @@
 #include "../Model/Jugador.h"
 #include "../Model/Casino.h"
 
-
 #include <iostream>
 #include <list>
 #include <map>
+#include<cstdlib>
+#include<ctime>
 
 using std::cin;
 using std::cout;
@@ -33,5 +34,6 @@ public:
     void verInfoJugador(long idJugador);
     void retirarJugador(long idJugador);
     void recargarGonzos(long idJugador);
+    void venderGonzos(long idJugador);
 };
 #endif //CASINO_CONTROLLER_H

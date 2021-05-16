@@ -118,6 +118,12 @@
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/casino/Model/Mayor13.h">
 			<Option target="casino"/>
 		</Unit>
+		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/casino/Model/Veintiuno.cpp">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/casino/Model/Veintiuno.h">
+			<Option target="casino"/>
+		</Unit>
 		<Unit filename="C:/Users/pc1/Desktop/TareaPOO/casino/View/View.cpp">
 			<Option target="casino"/>
 		</Unit>

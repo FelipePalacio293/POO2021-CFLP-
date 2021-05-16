@@ -36,7 +36,7 @@ void Jugador::aumentarJuegos() {
 }
 
 void Jugador::actualizarGonzos(float resultadoJuego) {
-    cout << "Por implementar \n";
+    this->cantGonzos += resultadoJuego;
 }
 
 const string &Jugador::getNombre() const {
