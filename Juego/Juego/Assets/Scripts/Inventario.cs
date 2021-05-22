@@ -9,9 +9,9 @@ public class Inventario
     public Inventario()
     {
         items = new List<Item>();
-        agregarItem(new Item { itemType = Item.ItemType.espada });
-        agregarItem(new Item { itemType = Item.ItemType.pocionVida });
-        agregarItem(new Item { itemType = Item.ItemType.pocionDanio });
+        agregarItem(new Item { itemType = Item.ItemType.espada, cantidadItem = 1 });
+        agregarItem(new Item { itemType = Item.ItemType.hacha, cantidadItem = 1 });
+        agregarItem(new Item { itemType = Item.ItemType.lanza, cantidadItem = 1 });
     }
 
     public void agregarItem(Item item)

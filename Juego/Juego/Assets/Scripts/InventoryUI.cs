@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class InventoryUI : MonoBehaviour
 
     private void Awake()
     {
-        itemSlotContainer = transform.Find("itemSlotContainer");
-        itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
+       
     }
 
     public void setInventario(Inventario inventario)
     {
+        itemSlotContainer = transform.Find("itemSlotContainer");
+        itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
         this.inventario = inventario;
         refrescarItemsInventario();
     }
@@ -24,12 +26,14 @@ public class InventoryUI : MonoBehaviour
     {
         int x = 0;
         int y = 0;
-        float itemSlotSize = 100f;
+        float itemSlotSize = 60f;
         foreach(Item item in inventario.getItemList())
         {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotSize, y * itemSlotSize);
+            Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
+            image.sprite = item.getSprite();
             x++;
             if(x > 4)
             {
