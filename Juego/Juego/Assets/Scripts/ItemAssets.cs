@@ -11,6 +11,8 @@ public class ItemAssets : MonoBehaviour
         Instance = this;
     }
 
+    public Transform pfItemMundo;
+
     public Sprite spriteEspada;
     public Sprite spriteLanza;
     public Sprite spriteHacha;
@@ -18,4 +20,5 @@ public class ItemAssets : MonoBehaviour
     public Sprite spritePocionVida;
     public Sprite spritePocionAumentoDanio;
     public Sprite spritePocionHuir;
+    public Sprite spriteLlave;
 }

@@ -1,22 +1,83 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventario
 {
+    public event EventHandler siLaListaCambia;
     List<Item> items;
     private int capacidadInventario = 10;
     public Inventario()
     {
         items = new List<Item>();
-        agregarItem(new Item { itemType = Item.ItemType.espada, cantidadItem = 1 });
-        agregarItem(new Item { itemType = Item.ItemType.hacha, cantidadItem = 1 });
-        agregarItem(new Item { itemType = Item.ItemType.lanza, cantidadItem = 1 });
+    }
+
+    public bool comprobarSiPuedeAgregarItem()
+    {
+        int cantItems = 0;
+        foreach (Item item1 in items)
+        {
+            cantItems += item1.cantidadItem;
+        }
+        if(cantItems >= capacidadInventario)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public void agregarItem(Item item)
     {
-        items.Add(item);
+        if (item.comprobarSiEsStackeable())
+        {
+            bool itemAlreadyInInventory = false;
+            foreach (Item item1 in items)
+            {
+                if (item1.itemType == item.itemType)
+                {
+                    item1.cantidadItem += 1;
+                    itemAlreadyInInventory = true;
+                }
+            }
+            if (!itemAlreadyInInventory)
+            {
+                items.Add(item);
+            }
+        }
+        else
+        {
+            items.Add(item);
+        }
+        siLaListaCambia?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void removerItem(Item item) 
+    {
+        if (item.comprobarSiEsStackeable())
+        {
+            Item itemInInventory = null;
+            foreach (Item inventoryItem in items)
+            {
+                if (inventoryItem.itemType == item.itemType)
+                {
+                    inventoryItem.cantidadItem -= item.cantidadItem;
+                    itemInInventory = inventoryItem;
+                }
+            }
+            if (itemInInventory != null && itemInInventory.cantidadItem <= 0)
+            {
+                items.Remove(itemInInventory);
+            }
+        }
+        else
+        {
+            items.Remove(item);
+        }
+        siLaListaCambia?.Invoke(this, EventArgs.Empty);
     }
 
     public List<Item> getItemList()

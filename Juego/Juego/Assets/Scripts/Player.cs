@@ -9,27 +9,40 @@ public class Player : Entidad
     private Rigidbody2D rigidbody2D;
     private Vector2 mov;
     private Inventario inventario;
+    private bool inventarioAbierto;
 
+    [SerializeField] private GameObject canvasInventario;
     [SerializeField] private InventoryUI inventarioUI;
 
     private void Awake()
     {
-        inventario = new Inventario();
-        inventarioUI.setInventario(inventario);
+        
     }
 
-    // Start is called before the first frame update
     void Start()
     {
+        inventarioAbierto = false;
+        inventario = new Inventario();
+        inventarioUI.setInventario(inventario);
         anim = GetComponent<Animator>();
-        rigidbody2D = GetComponent<Rigidbody2D>();      
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        canvasInventario.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        caminar();
-        morir(); 
+        if (!inventarioAbierto)
+        {
+            caminar();
+        }
+        if (inventarioAbierto)
+        {
+            cerrarInventario();
+        }
+        else
+        {
+            abrirInventario();
+        }
     }
 
     void FixedUpdate()
@@ -46,8 +59,13 @@ public class Player : Entidad
 
         if(mov != Vector2.zero)
         {
-            anim.SetFloat("MovX", mov.x);
-            anim.SetFloat("MovY", mov.y);
+            anim.SetFloat("movX", mov.x);
+            anim.SetFloat("movY", mov.y);
+            anim.SetBool("caminar", true);
+        }
+        else
+        {
+            anim.SetBool("caminar", false);
         }
     }
 
@@ -56,12 +74,40 @@ public class Player : Entidad
         rigidbody2D.MovePosition(rigidbody2D.position + mov * speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Recolectable"))
+        ItemMundo itemMundo = collision.GetComponent<ItemMundo>();
+        if(itemMundo != null)
         {
-            Destroy(collision.gameObject);
+            if (inventario.comprobarSiPuedeAgregarItem())
+            {
+                inventario.agregarItem(itemMundo.getItem());
+                itemMundo.destruirItem();
+            } 
         }
+    }
+
+    public void abrirInventario()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && !inventarioAbierto)
+        {
+            canvasInventario.SetActive(true);
+            inventarioAbierto = true;
+        }
+    }
+
+    public void cerrarInventario()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && inventarioAbierto)
+        {
+            canvasInventario.SetActive(false);
+            inventarioAbierto = false;
+        }
+    }
+
+    public void anaidirDelay()
+    {
+
     }
 
     public override void morir()

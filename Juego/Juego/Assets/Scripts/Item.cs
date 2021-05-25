@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Item
 {
     public enum ItemType
@@ -12,11 +14,18 @@ public class Item
         pocionVida,
         pocionDanio,
         pocionAumentoDanio,
-        pocionHuida
+        pocionHuida,
+        llave
     }
 
     public ItemType itemType;
     public int cantidadItem;
+    public bool esStackeable;
+
+    public bool getEsStackeable()
+    {
+        return this.esStackeable;
+    }
 
     public Sprite getSprite()
     {
@@ -30,7 +39,24 @@ public class Item
             case ItemType.pocionDanio:          return ItemAssets.Instance.spritePocionDanio;
             case ItemType.pocionAumentoDanio:   return ItemAssets.Instance.spritePocionHuir;
             case ItemType.pocionHuida:          return ItemAssets.Instance.spritePocionHuir;
+            case ItemType.llave:                return ItemAssets.Instance.spriteLlave;
+        }
+    }
 
+    public bool comprobarSiEsStackeable()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.pocionAumentoDanio:
+            case ItemType.pocionDanio:
+            case ItemType.pocionVida:
+            case ItemType.pocionHuida:
+                return true;
+            case ItemType.espada:
+            case ItemType.hacha:
+            case ItemType.lanza:
+                return false;
         }
     }
 }
