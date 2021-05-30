@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemMundo : MonoBehaviour
 {
+    
     public static ItemMundo generarItemMundo(Vector3 position, Item item)
     {
         Transform transform = Instantiate(ItemAssets.Instance.pfItemMundo, position, Quaternion.identity);
@@ -25,6 +26,7 @@ public class ItemMundo : MonoBehaviour
     {
         this.item = item;
         spriteRenderer.sprite = item.getSprite();
+        //spriteRenderer.material.color = Color.gray;
     }
 
     public Item getItem()

@@ -46,8 +46,8 @@ public class InventoryUI : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
-            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = ()  => { 
-               
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = ()  => {
+                inventario.usarItem(item);
             };
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => {
                 inventario.removerItem(item);

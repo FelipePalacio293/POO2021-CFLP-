@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Espada : Arma
 {
+    public void prueba()
+    {
 
+    }
 }

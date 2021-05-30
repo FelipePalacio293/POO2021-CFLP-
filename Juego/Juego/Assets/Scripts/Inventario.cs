@@ -30,6 +30,15 @@ public class Inventario
         }
     }
 
+    public void usarItem(Item item)
+    {
+        switch (item.getItemType())
+        {
+           
+        }
+        removerItem(item);
+    }
+
     public void agregarItem(Item item)
     {
         if (item.comprobarSiEsStackeable())

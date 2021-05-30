@@ -59,4 +59,9 @@ public class Item
                 return false;
         }
     }
+
+    public ItemType getItemType()
+    {
+        return itemType;
+    }
 }
