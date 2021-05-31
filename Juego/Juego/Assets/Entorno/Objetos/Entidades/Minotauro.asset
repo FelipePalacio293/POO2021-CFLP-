@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Minotauro
   puntosDeDanio: 3
-  puntosDeVidaMax: 25
+  puntosDeVidaMax: 27
+  puntosDefensa: 5
   sprite: {fileID: 5860768245719714309, guid: 9aff316a6959eec45b4c86e17f6f4494, type: 3}
   poderAprendibles:
   - poderBase: {fileID: 11400000, guid: ee6f6094f15ae0f46a38023b3be4e993, type: 2}
     nivel: 1
-  - poderBase: {fileID: 11400000, guid: edc2a06da60a10244b1369fc6cbad73e, type: 2}
+  - poderBase: {fileID: 11400000, guid: cb43f98eee4c84a4ab726c0900894cd5, type: 2}
+    nivel: 1
+  - poderBase: {fileID: 11400000, guid: 3c436a9bf6da78f4daf43fb65d6c8409, type: 2}
     nivel: 1

@@ -15,12 +15,15 @@ public class GameController : MonoBehaviour
     [SerializeField] Player player;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera camera;
+    [SerializeField] Camera cameraSecundaria;
+    [SerializeField] Canvas canvasInventario;
+    [SerializeField] GameObject canvasDatos;
 
     EstadoJuego estadoJuego;
 
     private void Start()
     {
-        generarItem();
+        //generarItem();
         player.iniciadorPeleas += iniciarBatalla;
         battleSystem.cuandoFinalicePelea += terminarPelea;
     }
@@ -30,6 +33,8 @@ public class GameController : MonoBehaviour
         estadoJuego = EstadoJuego.normal;
         camera.gameObject.SetActive(true);
         battleSystem.gameObject.SetActive(false);
+        canvasDatos.SetActive(true);
+        canvasInventario.worldCamera = camera;
         if (ganador)
         {
 
@@ -45,6 +50,8 @@ public class GameController : MonoBehaviour
         estadoJuego = EstadoJuego.luchando;
         battleSystem.gameObject.SetActive(true);
         camera.gameObject.SetActive(false);
+        canvasInventario.worldCamera = cameraSecundaria;
+        canvasDatos.SetActive(false);
 
         var caballero = player.GetComponent<Caballero>();
         var enemigo = player.getEnemigoActual().GetComponent<Enemigo>();

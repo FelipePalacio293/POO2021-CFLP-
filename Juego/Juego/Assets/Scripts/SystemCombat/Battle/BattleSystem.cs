@@ -18,13 +18,17 @@ public class BattleSystem : MonoBehaviour
     int actualAccion;
     int actualPoder;
 
+    GameObject canvasUI;
     Caballero caballero;
     Enemigo enemigo;
+    Inventario inventario;
 
     public void empezarPelea(Caballero caballero, Enemigo enemigo)
     {
         this.caballero = caballero;
         this.enemigo = enemigo;
+        inventario = caballero.getInventario();
+        canvasUI = caballero.getCanvasUI();
         StartCoroutine(setupBattle());
     }
 
@@ -56,6 +60,27 @@ public class BattleSystem : MonoBehaviour
         dialogBox.habilitarSelectorDeAccion(false);
         dialogBox.habilitarTextoDeDialogo(false);
         dialogBox.habilitarSelectorDePoder(true);
+    }
+
+    IEnumerator huirDeLaBatalla()
+    {
+        dialogBox.habilitarTextoDeDialogo(false);
+        dialogBox.habilitarSelectorDeAccion(false);
+        float generarPosibilidadEscape = UnityEngine.Random.Range(1, 10);
+        if(generarPosibilidadEscape <= -5)
+        {
+            dialogBox.habilitarTextoDeDialogo(true);
+            yield return dialogBox.escogerDialogo($"El Caballero ha escapado");
+            yield return new WaitForSeconds(1f);
+            cuandoFinalicePelea(true);
+        }
+        else
+        {
+            dialogBox.habilitarTextoDeDialogo(true);
+            yield return dialogBox.escogerDialogo($"El Caballero no ha escapado");
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(ejecutarAccionEnemigo());
+        }
     }
 
     IEnumerator ejecutarAccionJugador()
@@ -142,10 +167,11 @@ public class BattleSystem : MonoBehaviour
             }
             else if(actualAccion == 1)
             {
-
+                StartCoroutine(huirDeLaBatalla());
             }
         }
     }
+
     void habilitarCambioDePoder()
     {
         if(Input.GetKeyDown(KeyCode.RightArrow))
@@ -163,19 +189,9 @@ public class BattleSystem : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-
             dialogBox.habilitarSelectorDePoder(false);
-
             dialogBox.habilitarTextoDeDialogo(true);
-
             StartCoroutine(ejecutarAccionJugador());
-
         }
     }
 }
-
-        
-
-    
-
-    

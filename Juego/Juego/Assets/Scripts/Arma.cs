@@ -2,9 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arma : Item
+public abstract class Arma 
 {
-    private float puntosDeAtaque;
-    private float resistencia;
-    private float aumentoResistencia;
+    protected string nombre;
+    protected float puntosDeAtaque;
+    protected int durabilidad;
+    protected float aumentoResistencia;
+    protected string animacionArma;
+
+    public abstract void inicializarAtributos();
+
+    public float getAumentoResistencia()
+    {
+        return aumentoResistencia;
+    }
+
+    public int getDurabilidadArma()
+    {
+        return durabilidad;
+    }
+
+    public float getPuntosDeAtaque()
+    {
+        return puntosDeAtaque;
+    }
+
+    public string getNombre()
+    {
+        return nombre;
+    }
+
+    public string getNombreAnimacion()
+    {
+        return animacionArma;
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PocionVida : Item
 {
-    [SerializeField] private int vidaACurar;
+    [SerializeField] protected int vidaACurar;
     public int darVidaAlJugador()
     {
         return vidaACurar;

@@ -15,9 +15,12 @@ MonoBehaviour:
   nombre: Ciclope
   puntosDeDanio: 3
   puntosDeVidaMax: 25
-  sprite: {fileID: -601629585095655636, guid: 1e742090ebabf2747b99089ce8c1fc4c, type: 3}
+  puntosDefensa: 5
+  sprite: {fileID: 21300000, guid: fae68c5652bf73349afa9d7527851cde, type: 3}
   poderAprendibles:
   - poderBase: {fileID: 11400000, guid: edc2a06da60a10244b1369fc6cbad73e, type: 2}
     nivel: 1
-  - poderBase: {fileID: 11400000, guid: ee6f6094f15ae0f46a38023b3be4e993, type: 2}
+  - poderBase: {fileID: 11400000, guid: 92726f388936f294484acddfa7c07c8b, type: 2}
+    nivel: 1
+  - poderBase: {fileID: 11400000, guid: 6ecd1b36dd601a64ead803e5caeac1e9, type: 2}
     nivel: 1

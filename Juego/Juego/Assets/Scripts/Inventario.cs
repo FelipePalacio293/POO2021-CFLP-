@@ -8,8 +8,11 @@ public class Inventario
     public event EventHandler siLaListaCambia;
     List<Item> items;
     private int capacidadInventario = 10;
-    public Inventario()
+    private Action<Item> usarAccionItem;
+
+    public Inventario(Action<Item> usarAccionItem)
     {
+        this.usarAccionItem = usarAccionItem;
         items = new List<Item>();
     }
 
@@ -32,11 +35,9 @@ public class Inventario
 
     public void usarItem(Item item)
     {
-        switch (item.getItemType())
-        {
-           
-        }
-        removerItem(item);
+        usarAccionItem(item);
+        if (!item.getEsStackeable())
+            removerItem(item);
     }
 
     public void agregarItem(Item item)

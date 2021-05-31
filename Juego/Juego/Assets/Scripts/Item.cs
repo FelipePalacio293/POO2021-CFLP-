@@ -14,7 +14,7 @@ public class Item
         pocionVida,
         pocionDanio,
         pocionAumentoDanio,
-        pocionHuida,
+        pocionDefensa,
         llave
     }
 
@@ -38,7 +38,7 @@ public class Item
             case ItemType.pocionVida:           return ItemAssets.Instance.spritePocionVida;
             case ItemType.pocionDanio:          return ItemAssets.Instance.spritePocionDanio;
             case ItemType.pocionAumentoDanio:   return ItemAssets.Instance.spritePocionHuir;
-            case ItemType.pocionHuida:          return ItemAssets.Instance.spritePocionHuir;
+            case ItemType.pocionDefensa:          return ItemAssets.Instance.spritePocionHuir;
             case ItemType.llave:                return ItemAssets.Instance.spriteLlave;
         }
     }
@@ -51,7 +51,7 @@ public class Item
             case ItemType.pocionAumentoDanio:
             case ItemType.pocionDanio:
             case ItemType.pocionVida:
-            case ItemType.pocionHuida:
+            case ItemType.pocionDefensa:
                 return true;
             case ItemType.espada:
             case ItemType.hacha:
@@ -63,5 +63,21 @@ public class Item
     public ItemType getItemType()
     {
         return itemType;
+    }
+
+    public float getPropiedades()
+    {
+        switch (itemType)
+        {
+            case ItemType.pocionVida:
+                return 5f;
+            case ItemType.pocionDanio:
+                return 45f;
+            case ItemType.pocionAumentoDanio:
+                return 45f;
+            case ItemType.pocionDefensa:
+                return 45f;
+        }
+        return 0;
     }
 }

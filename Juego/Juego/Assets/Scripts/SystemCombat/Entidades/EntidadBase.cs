@@ -8,22 +8,45 @@ public class EntidadBase : ScriptableObject
     [SerializeField] string nombre;
     [SerializeField] int puntosDeDanio;
     [SerializeField] int puntosDeVidaMax;
+    [SerializeField] int puntosDefensa;
     [SerializeField] Sprite sprite;   
     [SerializeField] List<PoderAprendible> poderAprendibles; 
 
+    public void setPuntosDanio(int danio)
+    {
+        puntosDeDanio += danio;
+    }
+
+    public int getPuntosDanio()
+    {
+        return puntosDeDanio;
+    }
 
     public string Nombre
     {
         get{return nombre;}
     }
 
-    public int PuntosDeDanio{
-        get{return puntosDeDanio;}
+    public int getPuntosDefensa()
+    {
+        return puntosDefensa;
     }
+
+    public void setPuntosDefensa(int defensa)
+    {
+        if(defensa + puntosDefensa < 10)
+        {
+            puntosDefensa += defensa;
+        }
+    }
+
+    public int PuntosDeDanio { get; set; }
+
     public int PuntosDeVidaMax
     {
         get{return puntosDeVidaMax;}
     }
+
     public List<PoderAprendible> PoderAprendibles
     {
         get {return poderAprendibles;}

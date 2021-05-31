@@ -82,4 +82,27 @@ public class BattleDialogBox : MonoBehaviour
                 poderTexts[i].text = "-";
         }
     }
+
+    public void setNombresPociones(List<Item> items)
+    {
+        foreach(Item item in items)
+        {
+            switch (item.getItemType())
+            {
+                case Item.ItemType.pocionVida: 
+                    poderTexts[0].text = "Pocion Vida";
+                    break;
+                case Item.ItemType.pocionDanio: 
+                    poderTexts[1].text = "Pocion danio";
+                    break;
+                case Item.ItemType.pocionDefensa: 
+                    poderTexts[2].text = "Pocion huir";
+                    break;
+                case Item.ItemType.pocionAumentoDanio: 
+                    poderTexts[3].text = "Pocion aumento danio";
+                    break;
+            }
+            
+        }
+    }
 }

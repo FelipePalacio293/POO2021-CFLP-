@@ -50,7 +50,7 @@ public class Entidad
 
     public bool recibirDano(Poder poder, Entidad atacador)
     {
-        int danio = Mathf.FloorToInt(poder.Base.PoderDeAtaque * getNivel);
+        int danio = Mathf.FloorToInt((poder.Base.PoderDeAtaque * getNivel) - getEntidadBase.getPuntosDefensa() * 0.2f);
         Vida -= danio;
         if(Vida <= 0)
         {
