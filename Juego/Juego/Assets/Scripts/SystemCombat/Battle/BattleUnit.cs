@@ -15,6 +15,7 @@ public class BattleUnit : MonoBehaviour
     Vector3 originalPos;
     Color originalColor;
     
+    //Función de Unity
     private void Awake()
     {
         image = GetComponent<Image>();
@@ -22,6 +23,7 @@ public class BattleUnit : MonoBehaviour
         originalColor = image.color;
     }
 
+    //Permite que al encontrarse a los enemigos durante el mapa, pueda ser cargada la imagen en el sistema de combate.
     public void setup(Entidad entidad)
     {
         Entidad = entidad;
@@ -30,6 +32,7 @@ public class BattleUnit : MonoBehaviour
         image.color = originalColor;
     }
 
+    //Permite ver las animaciones de los personajes al ejecutar una acción de ataque.
     public void playEnterAnimation()
     {
         if(isPlayerUnit)
@@ -39,6 +42,7 @@ public class BattleUnit : MonoBehaviour
         image.transform.DOLocalMoveX(originalPos.x, 1f);
     }
 
+    //Permite ver las animaciones de los personajes al ser atacados.
     public void playAttackAnimation()
     {
         var sequence = DOTween.Sequence();
@@ -49,6 +53,7 @@ public class BattleUnit : MonoBehaviour
         sequence.Append(image.transform.DOLocalMoveX(originalPos.x, 0.25f));
     }
 
+    //Permite ver las animaciones de los personajes al ser atacados y afectados.
     public void playHitAnimation()
     {
         var Sequence = DOTween.Sequence();
@@ -56,6 +61,7 @@ public class BattleUnit : MonoBehaviour
         Sequence.Append(image.DOColor(originalColor, 0.1f));
     }
 
+    //Permite ver la animación de morir al acabarse la vida de algún personaje.
     public void playFaintAnimation()
     {
         var sequence = DOTween.Sequence();

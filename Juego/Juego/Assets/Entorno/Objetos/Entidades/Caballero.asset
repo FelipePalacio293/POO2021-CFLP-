@@ -18,7 +18,7 @@ MonoBehaviour:
   puntosDefensa: 6
   sprite: {fileID: -8963430878506320970, guid: 2627727fe02da9c4fa275eaa0a0c8c4e, type: 3}
   poderAprendibles:
-  - poderBase: {fileID: 11400000, guid: 2fa0d94de50c75d4d9250af4e4f23733, type: 2}
+  - poderBase: {fileID: 11400000, guid: e545ec5de00194c43ad95e5cd8ee5df7, type: 2}
     nivel: 1
   - poderBase: {fileID: 11400000, guid: edc2a06da60a10244b1369fc6cbad73e, type: 2}
     nivel: 1

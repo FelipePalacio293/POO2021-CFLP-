@@ -15,11 +15,13 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] List<Text> poderTexts;
     [SerializeField] List<Text> pocionTexts;
     
+
     public void SetDialog(string dialog)
     {
         dialogText.text = dialog;
     }
 
+    //Función para iniciar el texto de diálogo y darle tiempo a la aparición de letras.
     public IEnumerator escogerDialogo(string dialog)
     {
         dialogText.text = "";
@@ -30,26 +32,25 @@ public class BattleDialogBox : MonoBehaviour
         }
     }
 
+    //Función para activar el texto de diálogo general con los que inicia el combate.
     public void habilitarTextoDeDialogo(bool enabled)
     {
         dialogText.enabled = enabled;
     }
 
+    //Permite seleccionar entre las acciones (Huir - atacar).
     public void habilitarSelectorDeAccion(bool enabled)
     {
         accionSelector.SetActive(enabled);
     }
 
+    //Permite seleccionar los poderes después de haber accedido al apartado de atacar.
     public void habilitarSelectorDePoder(bool enabled)
     {
         poderSelector.SetActive(enabled);
     }
 
-    public void habilitarSelectorDePocion(bool enabled)
-    {
-        pocionSelector.SetActive(enabled);
-    }
-
+    //Ilumina la acción que se tiene seleccionada.
     public void actualizarCambioDeAccion(int accionSelected)
     {
         for(int i = 0; i < actionTexts.Count; ++i)
@@ -61,6 +62,7 @@ public class BattleDialogBox : MonoBehaviour
         }
     }
 
+    //Ilumina el poder que se tiene seleccionado.
     public void actualizarCambioDePoder(int poderSelected, Poder poder)
     {
         for(int i = 0; i < poderTexts.Count; ++i)
@@ -72,6 +74,7 @@ public class BattleDialogBox : MonoBehaviour
         }
     }
 
+    //Se guardan los poderes con sus nombre en una lista.
     public void setPoderesNombre(List<Poder> poderes)
     {
         for(int i = 0; i < poderTexts.Count; ++i)
@@ -83,6 +86,7 @@ public class BattleDialogBox : MonoBehaviour
         }
     }
 
+    //Se guardan las pociones con sus nombres en una lista.
     public void setNombresPociones(List<Item> items)
     {
         foreach(Item item in items)

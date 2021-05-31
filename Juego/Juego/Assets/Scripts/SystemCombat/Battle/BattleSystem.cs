@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Estados de la batalla.
 public enum BattleState {Start, AccionPlayer, PoderPlayer, PoderEnemy, Busy}
 public class BattleSystem : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class BattleSystem : MonoBehaviour
     Enemigo enemigo;
     Inventario inventario;
 
+    //Inicia la pelea en el sistema de batalla donde define a los personajes que se enfrentarán, su respectivo inventario y el inicio a la corutina para empezar la batalla.
     public void empezarPelea(Caballero caballero, Enemigo enemigo)
     {
         this.caballero = caballero;
@@ -32,6 +34,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(setupBattle());
     }
 
+    //Se cargan los datos de los personajes y aparece el primer cuadro de diálogo.
     public IEnumerator setupBattle()
     {
         playerUnit.setup(caballero.getEntidad());
@@ -47,6 +50,7 @@ public class BattleSystem : MonoBehaviour
         escogerAccion();
     }
 
+    //Función para escoger entre las acciones (atacar - huir).
     void escogerAccion()
     {
         state = BattleState.AccionPlayer;
@@ -54,6 +58,7 @@ public class BattleSystem : MonoBehaviour
         dialogBox.habilitarSelectorDeAccion(true);
     }
 
+    //Se activan los diálogos para que el personaje pueda hacer uso de sus poderes.
     void atacarDeJugador()
     {
         state = BattleState.PoderPlayer;
@@ -62,12 +67,13 @@ public class BattleSystem : MonoBehaviour
         dialogBox.habilitarSelectorDePoder(true);
     }
 
+    //Función para intentar huir de la batalla dependiendo de la probabilidad.
     IEnumerator huirDeLaBatalla()
     {
         dialogBox.habilitarTextoDeDialogo(false);
         dialogBox.habilitarSelectorDeAccion(false);
         float generarPosibilidadEscape = UnityEngine.Random.Range(1, 10);
-        if(generarPosibilidadEscape <= -5)
+        if(generarPosibilidadEscape <= 5)
         {
             dialogBox.habilitarTextoDeDialogo(true);
             yield return dialogBox.escogerDialogo($"El Caballero ha escapado");
@@ -83,6 +89,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //Se ejecutan las acciones del jugador como atacar, intercambiar entre los poderes y todo lo que resulta de atacar al enemigo.
     IEnumerator ejecutarAccionJugador()
     {
         state = BattleState.Busy;
@@ -108,6 +115,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //Se ejecutan las acciones automáticas del enemigo como atacar, intercambiar entre los poderes y todo lo que resulta de atacar al personaje.
     IEnumerator ejecutarAccionEnemigo()
     {
         state = BattleState.PoderEnemy;
@@ -132,6 +140,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //Habilitan las acciones que puede seleccionar el jugador.
     public void habilitarUpdate()
     {
         if(state == BattleState.AccionPlayer)
@@ -144,6 +153,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //Se implementa esta función para recorrer las acciones usando las flechas del teclado.
     void habilitarCambioDeAccion()
     {
         if(Input.GetKeyDown(KeyCode.DownArrow))
@@ -172,6 +182,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //Se implementa función para moverse por los poderes del personaje y seleccionarlos.
     void habilitarCambioDePoder()
     {
         if(Input.GetKeyDown(KeyCode.RightArrow))

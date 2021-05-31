@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Clase base del poder.
 public class Poder 
 {
     public PoderBase Base {get; set;}

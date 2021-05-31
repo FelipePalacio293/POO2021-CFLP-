@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Minotauro
   m_EditorClassIdentifier: 
   nombre: Minotauro
-  puntosDeDanio: 3
+  puntosDeDanio: 7
   puntosDeVidaMax: 27
   puntosDefensa: 5
   sprite: {fileID: 5860768245719714309, guid: 9aff316a6959eec45b4c86e17f6f4494, type: 3}

@@ -9,6 +9,7 @@ public class BattleHud : MonoBehaviour
     [SerializeField] HpBar hpBar;
     Entidad _entidad;
 
+    //Se definen las variables de la clase BattleHud para que puedan ser mostradas y utilizadas en la interfaz.
     public void setData(Entidad entidad)
     {
         _entidad = entidad;
@@ -16,6 +17,7 @@ public class BattleHud : MonoBehaviour
         hpBar.setHP((float)entidad.Vida / entidad.PuntosDeVidaMax);
     }
 
+    //Permite que la barra de vida en el sistema de combate pueda disminuir o aumentar.
     public IEnumerator UpdateVida()
     {
         yield return hpBar.SetHPSmooth((float)_entidad.Vida / _entidad.PuntosDeVidaMax);
