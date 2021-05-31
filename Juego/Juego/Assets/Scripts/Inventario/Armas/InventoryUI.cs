@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using CodeMonkey.Utils;
+using CodeMonkey.Utils; // Se utiliza la libreria de codey monkeys
 
 public class InventoryUI : MonoBehaviour
 {
-    private Inventario inventario;
+    private Inventario inventario; 
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
 
     private void Awake()
     {
-        itemSlotContainer = transform.Find("itemSlotContainer");
-        itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
-        
+        itemSlotContainer = transform.Find("itemSlotContainer"); // Se busca el objeto en todo el mundo
+        itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate"); // Se busca el objeto en todo el mundo
+
     }
 
     public void setInventario(Inventario inventario)
     {
         this.inventario = inventario;
-        inventario.siLaListaCambia += Inventario_siLaListaCambia;
+        inventario.siLaListaCambia += Inventario_siLaListaCambia;  // Se asigna el evento siLaListaCambia al inventario
         refrescarItemsInventario();
     }
 
@@ -46,10 +46,10 @@ public class InventoryUI : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
-            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = ()  => {
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = ()  => { // Se revisa si se hace click izquierdo en la imagen del objeto
                 inventario.usarItem(item);
             };
-            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => {
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => { // Se revisa si se hace click derecho en la imagen del objeto
                 inventario.removerItem(item);
             };
 

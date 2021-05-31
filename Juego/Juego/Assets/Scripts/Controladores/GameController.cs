@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public enum EstadoJuego
 {
     normal, 
@@ -10,9 +10,9 @@ public enum EstadoJuego
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] Transform[] transforms;
-    [SerializeField] Item[] items;
-    [SerializeField] Player player;
+    [SerializeField] Transform[] transforms; // Se crea una lista de transforms que se inicializa en la jerarquia
+    [SerializeField] Item[] items; // Se crea una lista de items que se inicializa en la jerarquia
+    [SerializeField] Player player; 
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera camera;
     [SerializeField] Camera cameraSecundaria;
@@ -37,14 +37,26 @@ public class GameController : MonoBehaviour
         audioSource.Play();
     }
 
+    // Funcion que genera los 25 items iniciales
     public void generarItemsIniciales()
     {
-
+        for(int i = 0; i <= 20; i++)
+        {
+            int x = Random.Range(0, transforms.Length - 1);
+            int y = Random.Range(0, items.Length - 1);
+            ItemWorldSpawner.instanciarItem(transforms[x], items[y]); // Se hace uso de la funcion de Unity Instantiate
+        }
     }
 
+    // Funcion que genera los 25 enemigos iniciales
     public void generarEnemigosIniciales()
     {
-        
+        for (int i = 0; i <= 20; i++)
+        {
+            int x = Random.Range(0, transforms.Length - 1);
+            int y = Random.Range(0, enemigos.Length - 1);
+            Instantiate(enemigos[y], transforms[x].position, Quaternion.identity); // Se hace uso de la funcion de Unity Instantiate
+        }
     }
 
     public void terminarPelea(bool ganador)
@@ -56,13 +68,9 @@ public class GameController : MonoBehaviour
         canvasInventario.worldCamera = camera;
         audioSource.clip = musicaAmbiental;
         audioSource.Play();
-        if (ganador)
+        if (!ganador)
         {
-
-        }
-        else
-        {
-
+            SceneManager.LoadScene("Muerte");
         }
     }
 
@@ -104,7 +112,7 @@ public class GameController : MonoBehaviour
     {
         int x = Random.Range(0, transforms.Length - 1);
         int y = Random.Range(0, enemigos.Length - 1);
-        Instantiate(enemigos[y], transforms[x]);
-        Invoke("generarEnemigo", 5f);
+        Instantiate(enemigos[y], transforms[x].position, Quaternion.identity);
+        Invoke("generarEnemigo", 30f);
     }
 }
