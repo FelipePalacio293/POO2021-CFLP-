@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     private float speed = 4f;
@@ -15,16 +14,19 @@ public class Player : MonoBehaviour
     private GameObject enemigoAtacandoActual;
     private string animacionActual;
 
+    //Función de Unity
     private void Awake()
     {
 
     }
 
+    //Actualiza las animaciones del jugador para poder moverse por el mapa.
     public void setAnimacionActual(string animacionActual)
     {
         this.animacionActual = animacionActual;
     }
 
+    //Función para habilitar la primera acción de movimiento.
     void Start()
     {
         animacionActual = "caminar";
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour
 
     }
 
+    //Permite activar las animaciones 'caminar'.
     public void habilitarUpdate()
     { 
         
@@ -40,11 +43,13 @@ public class Player : MonoBehaviour
         
     }
 
+    //Cambia las posiciones por las que se va moviendo el personaje.
     void FixedUpdate()
     {
         actualizarPosicion();
     }
 
+    //Función para poder caminar en las diferentes direcciones y ejes del plano cartesiano. Además usar un bool para poder cambiar entre quieto y caminar.
     void caminar()
     {
         mov = new Vector2(
@@ -64,11 +69,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Actualiza las posiciones por las que se mueve el personaje.
     void actualizarPosicion()
     {
         rigidbody2D.MovePosition(rigidbody2D.position + mov * speed * Time.deltaTime);
     }
 
+    //Colisión contra los enemigos e inicia el sistema de combate.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemigo"))
@@ -81,6 +88,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Retorna el enemigo con el que se topa en ese momento.
     public GameObject getEnemigoActual()
     {
         return enemigoAtacandoActual;

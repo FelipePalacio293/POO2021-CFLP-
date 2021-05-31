@@ -21,15 +21,18 @@ public class InventoryUI : MonoBehaviour
     public void setInventario(Inventario inventario)
     {
         this.inventario = inventario;
-        inventario.siLaListaCambia += Inventario_siLaListaCambia;  // Se asigna el evento siLaListaCambia al inventario
+        inventario.siLaListaCambia += Inventario_siLaListaCambia;  // Se asigna la funcion Inventario_siLaListaCambia al evento del inventario
         refrescarItemsInventario();
     }
 
+    // Se crea la funcion si la lista cambia
     public void Inventario_siLaListaCambia(object sender, System.EventArgs e)
     {
         refrescarItemsInventario();
     }
 
+    // Cuando se activa el evento siLaListaCambia, automaticamente es llamada la funcion refrescarItemsInventario, para determinar
+    // cual fue el cambio realizado en la lista y reflejarlo en el UI
     public void refrescarItemsInventario()
     {
         foreach(Transform child in itemSlotContainer)
@@ -57,10 +60,10 @@ public class InventoryUI : MonoBehaviour
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.getSprite();
 
-            TextMeshProUGUI uiText = itemSlotRectTransform.Find("text").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI uiText = itemSlotRectTransform.Find("text").GetComponent<TextMeshProUGUI>(); // Se busca el objeto dentro del mundo donde se va a poner la cantidad existente
             if (item.cantidadItem > 1)
             {
-                uiText.SetText(item.cantidadItem.ToString());
+                uiText.SetText(item.cantidadItem.ToString()); // Se pasa de Int a String para setear el texto de la cantidad del item
             }
             else
             {
@@ -68,7 +71,7 @@ public class InventoryUI : MonoBehaviour
             }
             
             x++;
-            if(x > 4)
+            if(x > 4) // Cuando los items son mayores a 4, se reinicia la posicion tanto en x como en y para seguir acomodando items
             {
                 x = 0;
                 y--;

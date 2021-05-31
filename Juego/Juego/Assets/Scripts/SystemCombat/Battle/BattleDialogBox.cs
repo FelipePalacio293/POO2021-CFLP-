@@ -10,7 +10,6 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] Color highligthtedColor;
     [SerializeField] GameObject accionSelector;
     [SerializeField] GameObject poderSelector;
-    [SerializeField] GameObject pocionSelector;
     [SerializeField] List<Text> actionTexts;
     [SerializeField] List<Text> poderTexts;
     [SerializeField] List<Text> pocionTexts;

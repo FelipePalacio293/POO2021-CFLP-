@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*Esta metodo permite asignar sonidos a diferentes acciones realizadas por el usuario*/
 public class ControladorDeSonidos: MonoBehaviour
 {
     public GameObject sonidoSeleccionar;

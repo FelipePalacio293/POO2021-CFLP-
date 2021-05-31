@@ -21,8 +21,8 @@ public class Caballero : MonoBehaviour
     private void Start()
     {
         player = GetComponent<Player>();
-        inventario = new Inventario(usarItem);
-        entidadCaballero.iniciarBatalla();
+        inventario = new Inventario(usarItem); // Se inicializa el inventario con la funcion usada para el evento utilizado cuando se usa un item
+        entidadCaballero.iniciarBatalla(); // Se inicializan los atributos del caballero
         canvasInventario.SetActive(false);
         inventarioUI.setInventario(inventario);
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -30,6 +30,7 @@ public class Caballero : MonoBehaviour
         entidadCaballero.getEntidadBase.setPuntosDefensa(5);
     }
 
+    // Se verifica el tipoDeItem que llega y con base a ello se llama la funcion que activa sus propiedades
     private void usarItem(Item item)
     {
         switch (item.itemType)
@@ -69,6 +70,7 @@ public class Caballero : MonoBehaviour
         }
     }
 
+    // 
     public void usarPocionVida(Item item)
     {
         if (entidadCaballero.Vida + item.getPropiedades() < entidadCaballero.getEntidadBase.PuntosDeVidaMax)
@@ -125,6 +127,7 @@ public class Caballero : MonoBehaviour
         fijarValoresAtributosUI();
     }
 
+    // Se fijan los stats del caballero en el UI del mundo
     public void fijarValoresAtributosUI()
     {
         cantVidaUi.SetText(entidadCaballero.Vida.ToString() + "/" + entidadCaballero.getEntidadBase.PuntosDeVidaMax.ToString());
@@ -139,15 +142,17 @@ public class Caballero : MonoBehaviour
         return entidadCaballero;
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Se comprueba el momento donde el personaje toca un item para agregarlo al inventario
         ItemMundo itemMundo = collision.GetComponent<ItemMundo>();
         if (itemMundo != null)
         {
             if (inventario.comprobarSiPuedeAgregarItem())
             {
                 inventario.agregarItem(itemMundo.getItem());
-                itemMundo.destruirItem();
+                itemMundo.destruirItem(); // Se destruye el item que esta en la escena
             }
         }
     }

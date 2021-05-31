@@ -28,8 +28,8 @@ public class GameController : MonoBehaviour
     {
         generarItem();
         generarEnemigo();
-        player.iniciadorPeleas += iniciarBatalla;
-        battleSystem.cuandoFinalicePelea += terminarPelea;
+        player.iniciadorPeleas += iniciarBatalla; // Se inicializa el evento iniciarPeleas del player, asociado con iniciarBatalla del controller
+        battleSystem.cuandoFinalicePelea += terminarPelea; // Se inicializa el evento cuandoFinalicePelea del BattleSystem, asociado con el terminar pelea del battlesystem
         audioSource = GetComponent<AudioSource>();
         generarItemsIniciales();
         generarEnemigosIniciales();
@@ -61,10 +61,10 @@ public class GameController : MonoBehaviour
 
     public void terminarPelea(bool ganador)
     {
-        estadoJuego = EstadoJuego.normal;
-        camera.gameObject.SetActive(true);
+        estadoJuego = EstadoJuego.normal; // Se pone el estado del juego en normal
+        camera.gameObject.SetActive(true); // Se activa la camara principal
         battleSystem.gameObject.SetActive(false);
-        canvasDatos.SetActive(true);
+        canvasDatos.SetActive(true); 
         canvasInventario.worldCamera = camera;
         audioSource.clip = musicaAmbiental;
         audioSource.Play();
@@ -76,25 +76,25 @@ public class GameController : MonoBehaviour
 
     public void iniciarBatalla()
     {
-        estadoJuego = EstadoJuego.luchando;
-        battleSystem.gameObject.SetActive(true);
-        camera.gameObject.SetActive(false);
+        estadoJuego = EstadoJuego.luchando; // Se pone el estado del juego en luchando
+        battleSystem.gameObject.SetActive(true);  // Se activa el battlesystem completo
+        camera.gameObject.SetActive(false);  // Se desactiva la camara principal
         canvasInventario.worldCamera = cameraSecundaria;
         canvasDatos.SetActive(false);
-        audioSource.clip = musicaPelea;
+        audioSource.clip = musicaPelea;  // Se cambia el clip de reproduccion
         audioSource.Play();
-        var caballero = player.GetComponent<Caballero>();
-        var enemigo = player.getEnemigoActual().GetComponent<Enemigo>();
+        var caballero = player.GetComponent<Caballero>();  // Del Player se extrae el componente caballero
+        var enemigo = player.getEnemigoActual().GetComponent<Enemigo>(); // Del Player se extrae el componente enemigo que esta tocando actualmente
         battleSystem.empezarPelea(caballero, enemigo);
     }
 
     private void Update()
     {
-        if(estadoJuego == EstadoJuego.normal)
+        if(estadoJuego == EstadoJuego.normal) // Se llama al Update del player solo si el estado del juego es normal
         {
             player.habilitarUpdate();
         }
-        else if(estadoJuego == EstadoJuego.luchando)
+        else if(estadoJuego == EstadoJuego.luchando) // Se llama al Update del luchando solo si el estado del juego es luchando
         {
             battleSystem.habilitarUpdate();
         }
@@ -102,8 +102,8 @@ public class GameController : MonoBehaviour
 
     public void generarItem() 
     {
-        int x = Random.Range(0, transforms.Length - 1);
-        int y = Random.Range(0, items.Length - 1);
+        int x = Random.Range(0, transforms.Length - 1); // Se genera una posicion aleatoria de la lista de transforms
+        int y = Random.Range(0, items.Length - 1); // Se genera una posicion aleatoria de la lista de items
         ItemWorldSpawner.instanciarItem(transforms[x], items[y]);
         Invoke("generarItem", 30f);
     }

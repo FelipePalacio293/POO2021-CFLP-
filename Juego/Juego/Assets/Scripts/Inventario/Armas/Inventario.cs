@@ -16,8 +16,10 @@ public class Inventario
         items = new List<Item>();
     }
 
+
     public bool comprobarSiPuedeAgregarItem()
     {
+        // Se recorre la lista de items en el inventario para determinar si es mayor que la capacidadDelInventario
         int cantItems = 0;
         foreach (Item item1 in items)
         {
@@ -32,6 +34,7 @@ public class Inventario
             return true;
         }
     }
+
 
     public void usarItem(Item item)
     {
